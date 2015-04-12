@@ -32,13 +32,20 @@
 	///*If 1, an initialization program is run. If 0, no LEDs are on the board
 	#define PL_NUM_LEDS (2)
 	///*The ROBO Board has 2 LEDS
+
+	#define PL_HAS_RTOS (1)
+	///*ROBO Board has RTOS Functionality
 #endif
 
 #if PL_TARGET_BOARD == KL25ZFRDM
 	#define PL_HAS_LED	(1)
 	///*If 1, an initialization program is run. If 0, no LEDs are on the board
+
 	#define PL_NUM_LEDS (3)
-		///*FRDM Board has an RGB LED
+	///*FRDM Board has an RGB LED
+
+	#define PL_HAS_RTOS (1)
+	///*FRDM Board has RTOS Functionality
 #endif
 
 

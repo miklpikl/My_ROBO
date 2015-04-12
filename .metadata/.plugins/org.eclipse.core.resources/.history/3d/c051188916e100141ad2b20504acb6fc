@@ -45,7 +45,7 @@
 	///*FRDM Board has an RGB LED
 
 	#define PL_HAS_RTOS (1)
-	///*ROBO Board has RTOS Functionality
+	///*FRDM Board has RTOS Functionality
 #endif
 
 

@@ -1,0 +1,3 @@
+/ROBO/Documentation/doxygen/pex.doxyfile
+/FRDM/Documentation/doxygen/pex.doxyfile
+/FRDM/doxy/FRDM.doxyfile

@@ -5,20 +5,26 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Sources/Events.c \
+../Sources/Function_Template.c \
 ../Sources/LED.c \
 ../Sources/Platform.c \
+../Sources/RTOS.c \
 ../Sources/main.c 
 
 OBJS += \
 ./Sources/Events.o \
+./Sources/Function_Template.o \
 ./Sources/LED.o \
 ./Sources/Platform.o \
+./Sources/RTOS.o \
 ./Sources/main.o 
 
 C_DEPS += \
 ./Sources/Events.d \
+./Sources/Function_Template.d \
 ./Sources/LED.d \
 ./Sources/Platform.d \
+./Sources/RTOS.d \
 ./Sources/main.d 
 
 

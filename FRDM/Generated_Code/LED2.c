@@ -6,7 +6,7 @@
 **     Component   : LEDbit
 **     Version     : Component 01.003, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-02, 15:11, # CodeGen: 3
+**     Date/Time   : 2015-04-12, 15:10, # CodeGen: 1
 **     Abstract    :
 **          This component implements a universal driver for a single LED.
 **     Settings    :

@@ -23,13 +23,20 @@
 
 #define PL_TARGET_BOARD KL25ZFRDM ///*Sets the current platform
 
-///* The following are possible modules on the supported platforms
-#define PL_HAS_LED	(1)
-	///*This is set to 1 to enable the LEDs, if not, set to 0
+///* The following are possible modules on the supported platforms.
+///* Each if construct will populate the macros based on which platform
+///* is active.
 
+#if PL_TARGET_BOARD == K22FXROBO
+	#define PL_HAS_LED	(1)
+	///*If 1, an initialization program is run. If 0, no LEDs are on the board
+	#define PL_NUM_LEDS (2)
+	///*The ROBO Board has 2 LEDS
+#endif
 
-
-#if PL_IS_FRDM
+#if PL_TARGET_BOARD == KL25ZFRDM
+	#define PL_HAS_LED	(1)
+	///*If 1, an initialization program is run. If 0, no LEDs are on the board
 	#define PL_NUM_LEDS (3)
 		///*FRDM Board has an RGB LED
 #endif

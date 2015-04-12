@@ -5,7 +5,7 @@
 **     Processor   : MK22FX512VLQ12
 **     Version     : Component 01.014, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-07, 03:50, # CodeGen: 0
+**     Date/Time   : 2015-04-12, 14:46, # CodeGen: 2
 **     Abstract    :
 **
 **     Settings    :
@@ -60,6 +60,13 @@
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
+#include "LED1.h"
+#include "LEDpin1.h"
+#include "BitIoLdd1.h"
+#include "LED2.h"
+#include "LEDpin2.h"
+#include "BitIoLdd2.h"
+#include "WAIT1.h"
 
 
 /*

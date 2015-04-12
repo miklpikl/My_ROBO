@@ -4,7 +4,7 @@
 **     Processor   : MKL25Z128VLK4
 **     Version     : Driver 01.01
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-02, 13:59, # CodeGen: 0
+**     Date/Time   : 2015-04-12, 15:04, # CodeGen: 0
 **     Abstract    :
 **         Main module.
 **         This module contains user's application code.
@@ -40,9 +40,6 @@
 #include "LEDpin3.h"
 #include "BitIoLdd3.h"
 #include "WAIT1.h"
-#include "LED.h"
-#include "Platform.h"
-
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -62,11 +59,6 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
-
-  while(1)
-  {
-	  LED_TEST();
-  }
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/

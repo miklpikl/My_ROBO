@@ -35,36 +35,54 @@
     <FLASHsize>512k</FLASHsize>
   </PROCESSOR>
   <PATHS>
-    <LinkerCommandFile>C:\Users\MiklPikl\workspace.kds\ROBO\Project_Settings\Linker_Files\ProcessorExpert.ld</LinkerCommandFile>
+    <LinkerCommandFile>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Project_Settings\Linker_Files\ProcessorExpert.ld</LinkerCommandFile>
     <IncludePaths>
       <Path>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\</Path>
       <Path>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\iofiles\</Path>
-      <Path>C:\Users\MiklPikl\workspace.kds\ROBO\Sources\</Path>
-      <Path>C:\Users\MiklPikl\workspace.kds\ROBO\Generated_Code\</Path>
+      <Path>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Sources\</Path>
+      <Path>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\</Path>
     </IncludePaths>
     <SourceCodePaths>
-      <Path>C:\Users\MiklPikl\workspace.kds\ROBO\Generated_Code\</Path>
-      <Path>C:\Users\MiklPikl\workspace.kds\ROBO\Project_Settings\Startup_Code\</Path>
-      <Path>C:\Users\MiklPikl\workspace.kds\ROBO\Sources\</Path>
+      <Path>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\</Path>
+      <Path>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Project_Settings\Startup_Code\</Path>
+      <Path>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Sources\</Path>
     </SourceCodePaths>
   </PATHS>
   <FILES>
     <GeneratedCs>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Generated_Code\Cpu.c</PathName>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Generated_Code\PE_LDD.c</PathName>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Generated_Code\Vectors.c</PathName>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Project_Settings\Startup_Code\startup.c</PathName>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Sources\Events.c</PathName>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Sources\main.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\BitIoLdd1.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\BitIoLdd2.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\Cpu.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\LED1.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\LED2.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\LEDpin1.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\LEDpin2.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\PE_LDD.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\Vectors.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\WAIT1.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Project_Settings\Startup_Code\startup.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Sources\Events.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Sources\LED.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Sources\Platform.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Sources\main.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Generated_Code\Cpu.h</PathName>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Generated_Code\IO_Map.h</PathName>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Generated_Code\PE_Const.h</PathName>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Generated_Code\PE_Error.h</PathName>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Generated_Code\PE_LDD.h</PathName>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Generated_Code\PE_Types.h</PathName>
-      <PathName>C:\Users\MiklPikl\workspace.kds\ROBO\Sources\Events.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\BitIoLdd1.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\BitIoLdd2.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\Cpu.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\IO_Map.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\LED1.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\LED2.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\LEDpin1.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\LEDpin2.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\PE_Const.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\PE_Error.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\PE_LDD.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\PE_Types.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\WAIT1.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Sources\Events.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Sources\LED.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Sources\Platform.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\iofiles\MK22F12.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\ADC_PDD.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\CAN_PDD.h</PathName>

@@ -52,7 +52,7 @@ all: FRDM.elf secondary-outputs
 FRDM.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Werror -Wall -Wextra  -g3 -T "C:/Users/MiklPikl/workspace.kds/FRDM/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/MiklPikl/workspace.kds/FRDM/Project_Settings/Linker_Files" -Wl,-Map,"FRDM.map" -nanolibc -o "FRDM.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/MiklPikl/Desktop/School/6th Semester- Luzern/1 - Infotronics/My_ROBO/FRDM/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/MiklPikl/Desktop/School/6th Semester- Luzern/1 - Infotronics/My_ROBO/FRDM/Project_Settings/Linker_Files" -Wl,-Map,"FRDM.map" -nanolibc -o "FRDM.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

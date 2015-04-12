@@ -7,7 +7,7 @@
 **     Version     : Component 01.014, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : K22P144M100SF5RM, Rev.2, Apr 2013
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-07, 03:50, # CodeGen: 0
+**     Date/Time   : 2015-04-12, 14:46, # CodeGen: 2
 **     Abstract    :
 **
 **     Settings    :
@@ -60,6 +60,13 @@
 /* MODULE Cpu. */
 
 /* {Default RTOS Adapter} No RTOS includes */
+#include "LED1.h"
+#include "LEDpin1.h"
+#include "BitIoLdd1.h"
+#include "LED2.h"
+#include "LEDpin2.h"
+#include "BitIoLdd2.h"
+#include "WAIT1.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -147,8 +154,8 @@ void __init_hardware(void)
                 SIM_CLKDIV1_OUTDIV2(0x01) |
                 SIM_CLKDIV1_OUTDIV3(0x03) |
                 SIM_CLKDIV1_OUTDIV4(0x03); /* Set the system prescalers to safe value */
-  /* SIM_SCGC5: PORTA=1 */
-  SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK;   /* Enable clock gate for ports to enable pin routing */
+  /* SIM_SCGC5: PORTE=1,PORTA=1 */
+  SIM_SCGC5 |= (SIM_SCGC5_PORTE_MASK | SIM_SCGC5_PORTA_MASK); /* Enable clock gate for ports to enable pin routing */
   if ((PMC_REGSC & PMC_REGSC_ACKISO_MASK) != 0x0U) {
     /* PMC_REGSC: ACKISO=1 */
     PMC_REGSC |= PMC_REGSC_ACKISO_MASK; /* Release IO pads after wakeup from VLLS mode. */
@@ -274,6 +281,14 @@ void PE_low_level_init(void)
   /* Common initialization of the CPU registers */
   /* NVICIP20: PRI20=0 */
   NVICIP20 = NVIC_IP_PRI20(0x00);
+  /* ### BitIO_LDD "BitIoLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd1_Init(NULL);
+  /* ### LEDbit "LED1" init code ... */
+  LED1_Init(); /* initializes the driver */
+  /* ### BitIO_LDD "BitIoLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd2_Init(NULL);
+  /* ### LEDbit "LED2" init code ... */
+  LED2_Init(); /* initializes the driver */
   /* Enable interrupts of the given priority level */
   Cpu_SetBASEPRI(0U);
 }

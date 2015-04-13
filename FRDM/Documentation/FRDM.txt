@@ -48,6 +48,14 @@ Module "WAIT1"     (component Wait)
    - WAIT1_WaitOSms -If an RTOS is enabled, this routine will use a non-blocking wait method. Otherwise it will do a 
                 busy/blocking wait.
 
+Module "CS1"       (component CriticalSection)
+   - CS1_CriticalVariable -Defines a variable if necessary. This is a macro.
+   - CS1_EnterCritical -Enters a critical section
+   - CS1_ExitCritical -Exits a critical section
+
+Module "HF1"       (component HardFault)
+   - HF1_HardFaultHandler -Hard Fault Handler
+
 Module "Cpu"       (component MKL25Z128LK4)
 
 ===================================================================================

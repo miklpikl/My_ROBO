@@ -7,7 +7,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-12, 15:10, # CodeGen: 1
+**     Date/Time   : 2015-04-13, 08:06, # CodeGen: 3
 **     Abstract    :
 **
 **     Settings    :
@@ -70,6 +70,8 @@
 #include "LEDpin3.h"
 #include "BitIoLdd3.h"
 #include "WAIT1.h"
+#include "CS1.h"
+#include "HF1.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -258,6 +260,9 @@ void PE_low_level_init(void)
   (void)BitIoLdd3_Init(NULL);
   /* ### LEDbit "LED3" init code ... */
   LED3_Init(); /* initializes the driver */
+  /* ### CriticalSection "CS1" init code ... */
+  /* ### HardFault "HF1" init code ... */
+  /* Write code here ... */
   __EI();
 }
   /* Flash configuration field */

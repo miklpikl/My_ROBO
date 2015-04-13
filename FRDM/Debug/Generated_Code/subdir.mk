@@ -7,7 +7,9 @@ C_SRCS += \
 ../Generated_Code/BitIoLdd1.c \
 ../Generated_Code/BitIoLdd2.c \
 ../Generated_Code/BitIoLdd3.c \
+../Generated_Code/CS1.c \
 ../Generated_Code/Cpu.c \
+../Generated_Code/HF1.c \
 ../Generated_Code/LED1.c \
 ../Generated_Code/LED2.c \
 ../Generated_Code/LED3.c \
@@ -22,7 +24,9 @@ OBJS += \
 ./Generated_Code/BitIoLdd1.o \
 ./Generated_Code/BitIoLdd2.o \
 ./Generated_Code/BitIoLdd3.o \
+./Generated_Code/CS1.o \
 ./Generated_Code/Cpu.o \
+./Generated_Code/HF1.o \
 ./Generated_Code/LED1.o \
 ./Generated_Code/LED2.o \
 ./Generated_Code/LED3.o \
@@ -37,7 +41,9 @@ C_DEPS += \
 ./Generated_Code/BitIoLdd1.d \
 ./Generated_Code/BitIoLdd2.d \
 ./Generated_Code/BitIoLdd3.d \
+./Generated_Code/CS1.d \
 ./Generated_Code/Cpu.d \
+./Generated_Code/HF1.d \
 ./Generated_Code/LED1.d \
 ./Generated_Code/LED2.d \
 ./Generated_Code/LED3.d \

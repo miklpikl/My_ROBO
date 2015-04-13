@@ -11,6 +11,8 @@
 
 #include "Platform.h"
 #include "LED.h"
+#include "RTOS.h"
+#include "Event.h"
 
 void PL_INIT(void)
 {
@@ -21,7 +23,12 @@ void PL_INIT(void)
 
 	if PL_HAS_RTOS
 	{
-		RTOS_INIT();
+		RTOS_Init();
+	}
+
+	if PL_HAS_EVENTS
+	{
+		EVENT_Init();
 	}
 }
 

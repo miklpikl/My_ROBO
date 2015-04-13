@@ -35,9 +35,11 @@
 
 	#define PL_HAS_RTOS (1)
 	///*ROBO Board has RTOS Functionality
-#endif
 
-#if PL_TARGET_BOARD == KL25ZFRDM
+	#define PL_HAS_EVENTS (1)
+	///*ROBO Board can use Events
+
+#elif PL_TARGET_BOARD == KL25ZFRDM
 	#define PL_HAS_LED	(1)
 	///*If 1, an initialization program is run. If 0, no LEDs are on the board
 
@@ -46,6 +48,22 @@
 
 	#define PL_HAS_RTOS (1)
 	///*FRDM Board has RTOS Functionality
+
+	#define PL_HAS_EVENTS (1)
+	///*FRDM Board can use Events
+
+#else
+	#define PL_HAS_LED	(0)
+	///*If 1, an initialization program is run. If 0, no LEDs are on the board
+
+	#define PL_NUM_LEDS (0)
+	///*Assumed that the unknown board has no LEDS
+
+	#define PL_HAS_RTOS (0)
+	///*Deactivates RTOS
+
+	#define PL_HAS_EVENTS (0)
+	///*Deactivates Events
 #endif
 
 

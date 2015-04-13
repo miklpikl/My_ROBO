@@ -110,7 +110,7 @@ void APP_HandleEvents(EVENT_Handle event)
 		break;
 	#endif
 
-	default:
+	default;
 	break;	///*ends the switch
 	}
 

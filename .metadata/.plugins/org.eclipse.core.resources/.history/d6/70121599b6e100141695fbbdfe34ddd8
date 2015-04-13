@@ -1,0 +1,34 @@
+/*
+ * Appilication.c
+ *
+ *  Created on: Apr 13, 2015
+ *      Author: MiklPikl
+ */
+
+#include "Platform.h"
+#include "Application.h"
+#include "LED.h"
+#include "WAIT1.h"
+#include "Event.h"
+#include "RTOS.h"
+
+void APP_HandleEvents(EVENT_Handle event)
+{
+	switch(event)
+	{
+	case EVENT_Start:
+		LED1_ON;
+		WAIT1_Waitms(200)
+		LED1_OFF;
+
+	case EVENT_LED_Flash:
+		LED2_TOGGLE;
+		break;
+
+#if PL_NUM_KEYS >= 1
+	case EVENT_SW1_Press:
+		CLS1_
+	}
+}
+
+

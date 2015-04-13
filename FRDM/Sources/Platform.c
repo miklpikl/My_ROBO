@@ -30,6 +30,11 @@ void PL_INIT(void)
 	{
 		EVENT_Init();
 	}
+
+	if PL_HAS_EVENTS
+	{
+		EVENT_Init();
+	}
 }
 
 void PL_DEINIT(void)

@@ -63,14 +63,20 @@
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\LEDpin2.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\LEDpin3.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\PE_LDD.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TI1.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TU1.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TimerIntLdd1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\Vectors.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\WAIT1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Project_Settings\Startup_Code\startup.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Appilication.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Event.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Events.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Function_Template.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\LED.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Platform.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\RTOS.c</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Timer.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\main.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
@@ -91,11 +97,17 @@
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\PE_Error.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\PE_LDD.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\PE_Types.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TI1.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TU1.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TimerIntLdd1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\WAIT1.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Application.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Event.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Events.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\LED.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Platform.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\RTOS.h</PathName>
+      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Timer.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\iofiles\MKL25Z4.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\ADC_PDD.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\CMP_PDD.h</PathName>

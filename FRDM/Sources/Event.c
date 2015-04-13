@@ -84,6 +84,7 @@ void EVENT_HandleEvent (void (*callback)(EVENT_Handle))
 		if (GET_Event(event))
 		{
 			CLEAR_Event(event);
+			break;			///*Gets the program out of the loop
 		}
 	} 							///*This loop tests every event
 
@@ -106,7 +107,7 @@ void EVENT_Init(void)
 		EVENT_Events[i] = 0; 	///*This initializes the structure
 		i++;
 	} while(i < sizeof(EVENT_Events) / sizeof(EVENT_Events[0]));
-}
+}			///*This function clears any events that are currently in use
 
 void EVENT_DeInit(void)
 {

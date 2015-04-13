@@ -5,7 +5,7 @@
 **     Processor   : MKL25Z128VLK4
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-13, 08:06, # CodeGen: 3
+**     Date/Time   : 2015-04-13, 11:08, # CodeGen: 5
 **     Abstract    :
 **
 **     Settings    :
@@ -72,6 +72,9 @@
 #include "WAIT1.h"
 #include "CS1.h"
 #include "HF1.h"
+#include "TI1.h"
+#include "TimerIntLdd1.h"
+#include "TU1.h"
 
 
 /*

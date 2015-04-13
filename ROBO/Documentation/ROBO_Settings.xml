@@ -19,7 +19,19 @@
             <boolgroup name="Initialize fast trim value" v="no" />
           </group>
           <boolgroup name="RTC oscillator" v="Disabled" />
-          <boolgroup name="System oscillator 0" v="Disabled" />
+          <boolgroup name="System oscillator 0" v="Enabled">
+            <enumgroup name="Clock source" v="External crystal">
+              <group name="Clock input pin">
+                <Pin_name v="" />
+              </group>
+              <group name="Clock output pin">
+                <Pin_name v="" />
+              </group>
+              <Clock_frequency__MHz_ v="8" />
+              <Capacitor_load v="0pF" />
+              <Oscillator_operating_mode v="Low power" />
+            </enumgroup>
+          </boolgroup>
           <list name="Clock source settings" v="1">
             <group name="Clock source setting 0">
               <group name="Internal reference clock">
@@ -120,10 +132,10 @@
               </group>
               <group name="Flash block 1">
                 <Address v="268435456" />
-                <Size v="262144" />
+                <Size v="131072" />
                 <Write_unit_size v="8" />
                 <Erase_unit_size v="4096" />
-                <Protection_unit_size v="32768" />
+                <Protection_unit_size v="16384" />
               </group>
             </list>
           </group>
@@ -280,43 +292,29 @@
         <Default_memory_for_interrupts v="INTERNAL RAM" />
         <Default_memory_for_code v="INTERNAL RAM" />
         <Default_memory_for_data v="INTERNAL RAM" />
-        <list name="ROM/RAM Areas" v="6">
+        <list name="ROM/RAM Areas" v="3">
           <group name="MemoryArea0">
             <boolgroup name="ROM/RAM Area" v="Enabled">
               <Name v="m_interrupts" />
               <Qualifier v="RX" />
-              <Address v="0" />
+              <Address v="536838144" />
               <Size v="392" />
             </boolgroup>
           </group>
           <group name="MemoryArea1">
-            <boolgroup name="ROM/RAM Area" v="Disabled" />
-          </group>
-          <group name="MemoryArea2">
             <boolgroup name="ROM/RAM Area" v="Enabled">
               <Name v="m_text" />
               <Qualifier v="RX" />
-              <Address v="1040" />
-              <Size v="523248" />
+              <Address v="536870912" />
+              <Size v="32768" />
             </boolgroup>
           </group>
-          <group name="MemoryArea3">
-            <boolgroup name="ROM/RAM Area" v="Disabled" />
-          </group>
-          <group name="MemoryArea4">
+          <group name="MemoryArea2">
             <boolgroup name="ROM/RAM Area" v="Enabled">
               <Name v="m_data" />
               <Qualifier v="RW" />
-              <Address v="536838144" />
-              <Size v="32768" />
-            </boolgroup>
-          </group>
-          <group name="MemoryArea5">
-            <boolgroup name="ROM/RAM Area" v="Enabled">
-              <Name v="m_data_20000000" />
-              <Qualifier v="RW" />
-              <Address v="536870912" />
-              <Size v="32768" />
+              <Address v="536838536" />
+              <Size v="32376" />
             </boolgroup>
           </group>
         </list>
@@ -340,7 +338,19 @@
             <boolgroup name="Initialize fast trim value" v="no" />
           </group>
           <boolgroup name="RTC oscillator" v="Disabled" />
-          <boolgroup name="System oscillator 0" v="Disabled" />
+          <boolgroup name="System oscillator 0" v="Enabled">
+            <enumgroup name="Clock source" v="External crystal">
+              <group name="Clock input pin">
+                <Pin_name v="EXTAL0/PTA18/FTM0_FLT2/FTM_CLKIN0" />
+              </group>
+              <group name="Clock output pin">
+                <Pin_name v="XTAL0/PTA19/FTM1_FLT0/FTM_CLKIN1/LPTMR0_ALT1" />
+              </group>
+              <Clock_frequency__MHz_ v="8" />
+              <Capacitor_load v="0pF" />
+              <Oscillator_operating_mode v="Low power" />
+            </enumgroup>
+          </boolgroup>
           <list name="Clock source settings" v="1">
             <group name="Clock source setting 0">
               <group name="Internal reference clock">
@@ -354,35 +364,35 @@
               <group name="External reference clock">
                 <OSC0ERCLK_clock v="Enabled" />
                 <OSC0ERCLK_in_stop v="Disabled" />
-                <OSC0ERCLK_clock__MHz_ v="0" />
+                <OSC0ERCLK_clock__MHz_ v="8" />
                 <ERCLK32K_clock_source v="Auto select" />
                 <ERCLK32K__clock__kHz_ v="0.001000000000" />
               </group>
               <group name="MCG settings">
-                <enumgroup name="MCG mode" v="FEI">
+                <enumgroup name="MCG mode" v="PEE">
                   <EmptySection_DummyValue />
                 </enumgroup>
-                <MCG_output_clock v="FLL clock" />
-                <MCG_output__MHz_ v="20.971520000000" />
+                <MCG_output_clock v="PLL clock" />
+                <MCG_output__MHz_ v="120" />
                 <MCG_external_ref__clock_source v="System oscillator 0" />
-                <MCG_external_ref__clock__MHz_ v="0" />
+                <MCG_external_ref__clock__MHz_ v="8" />
                 <Clock_monitor v="Disabled" />
                 <group name="FLL settings">
-                  <FLL_module v="Enabled" />
-                  <FLL_output__MHz_ v="20.971520000000" />
-                  <MCGFFCLK_clock__kHz_ v="32.768000000000" />
-                  <enumgroup name="Reference clock source" v="Slow internal clock">
-                    <EmptySection_DummyValue />
+                  <FLL_module v="Disabled" />
+                  <FLL_output__MHz_ v="0" />
+                  <MCGFFCLK_clock__kHz_ v="31.250000000000" />
+                  <enumgroup name="Reference clock source" v="External clock">
+                    <Reference_clock_divider v="Auto select" />
                   </enumgroup>
-                  <FLL_reference_clock__kHz_ v="32.768000000000" />
+                  <FLL_reference_clock__kHz_ v="31.250000000000" />
                   <Multiplication_factor v="Auto select" />
                 </group>
                 <group name="PLL 0 settings">
-                  <PLL_module v="Disabled" />
+                  <PLL_module v="Enabled" />
                   <PLL_module_in_Stop v="Disabled" />
-                  <PLL_output__MHz_ v="0" />
+                  <PLL_output__MHz_ v="120" />
                   <Reference_clock_divider v="Auto select" />
-                  <PLL_reference_clock__MHz_ v="1" />
+                  <PLL_reference_clock__MHz_ v="4" />
                   <Multiplication_factor v="Auto select" />
                   <Loss_of_lock_interrupt v="Disabled" />
                 </group>
@@ -391,7 +401,7 @@
           </list>
         </group>
       </list>
-      <Initialization_priority v="minimal priority" />
+      <Initialization_priority v="1" />
       <Watchdog_disable v="yes" />
       <group name="Internal peripherals">
         <list name="Shared NMI settings" v="1">
@@ -629,24 +639,24 @@
         <group name="Clock configuration 0">
           <boolgroup name="Very low power mode" v="Disabled" />
           <enumgroup name="Clock source setting" v="configuration 0">
-            <MCG_mode v="FEI" />
-            <MCG_output__MHz_ v="20.971520000000" />
+            <MCG_mode v="PEE" />
+            <MCG_output__MHz_ v="120" />
             <MCGIRCLK_clock__MHz_ v="0.032768" />
-            <OSCERCLK_clock__MHz_ v="0" />
+            <OSCERCLK_clock__MHz_ v="8" />
             <ERCLK32K__clock__kHz_ v="0.001" />
-            <MCGFFCLK__kHz_ v="32.768" />
+            <MCGFFCLK__kHz_ v="31.25" />
           </enumgroup>
           <group name="System clocks">
             <Core_clock_prescaler v="Auto select" />
-            <Core_clock v="20.971520000000" />
+            <Core_clock v="120" />
             <Bus_clock_prescaler v="Auto select" />
-            <Bus_clock v="20.971520000000" />
+            <Bus_clock v="60" />
             <External_clock_prescaler v="Auto select" />
-            <External_bus_clock v="10.485760000000" />
+            <External_bus_clock v="8" />
             <Flash_clock_prescaler v="Auto select" />
-            <Flash_clock v="10.485760000000" />
+            <Flash_clock v="24" />
             <enumgroup name="PLL/FLL clock selection" v="FLL clock">
-              <Clock_frequency__MHz_ v="20.971520000000" />
+              <Clock_frequency__MHz_ v="0" />
             </enumgroup>
           </group>
         </group>

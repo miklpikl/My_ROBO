@@ -127,7 +127,7 @@
     </GenFiles>
     <SignalListFile>Documentation\ROBO_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>3</ProjectModificationStamp>
+    <ProjectModificationStamp>4</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>false</Generated>
@@ -204,8 +204,8 @@
     <GenComponentVersion>01.014</GenComponentVersion>
     <GenDriverVersion>01.04</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1183610336</HeaderAge>
-    <CodeAge>1183610336</CodeAge>
+    <HeaderAge>1183667749</HeaderAge>
+    <CodeAge>1183667749</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>14</GenNumMethods>
     <SetClockConfiguration>false</SetClockConfiguration>

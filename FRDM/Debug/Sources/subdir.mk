@@ -4,30 +4,36 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Sources/Appilication.c \
 ../Sources/Event.c \
 ../Sources/Events.c \
 ../Sources/Function_Template.c \
 ../Sources/LED.c \
 ../Sources/Platform.c \
 ../Sources/RTOS.c \
+../Sources/Timer.c \
 ../Sources/main.c 
 
 OBJS += \
+./Sources/Appilication.o \
 ./Sources/Event.o \
 ./Sources/Events.o \
 ./Sources/Function_Template.o \
 ./Sources/LED.o \
 ./Sources/Platform.o \
 ./Sources/RTOS.o \
+./Sources/Timer.o \
 ./Sources/main.o 
 
 C_DEPS += \
+./Sources/Appilication.d \
 ./Sources/Event.d \
 ./Sources/Events.d \
 ./Sources/Function_Template.d \
 ./Sources/LED.d \
 ./Sources/Platform.d \
 ./Sources/RTOS.d \
+./Sources/Timer.d \
 ./Sources/main.d 
 
 

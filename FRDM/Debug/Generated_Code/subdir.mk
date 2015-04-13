@@ -17,6 +17,9 @@ C_SRCS += \
 ../Generated_Code/LEDpin2.c \
 ../Generated_Code/LEDpin3.c \
 ../Generated_Code/PE_LDD.c \
+../Generated_Code/TI1.c \
+../Generated_Code/TU1.c \
+../Generated_Code/TimerIntLdd1.c \
 ../Generated_Code/Vectors.c \
 ../Generated_Code/WAIT1.c 
 
@@ -34,6 +37,9 @@ OBJS += \
 ./Generated_Code/LEDpin2.o \
 ./Generated_Code/LEDpin3.o \
 ./Generated_Code/PE_LDD.o \
+./Generated_Code/TI1.o \
+./Generated_Code/TU1.o \
+./Generated_Code/TimerIntLdd1.o \
 ./Generated_Code/Vectors.o \
 ./Generated_Code/WAIT1.o 
 
@@ -51,6 +57,9 @@ C_DEPS += \
 ./Generated_Code/LEDpin2.d \
 ./Generated_Code/LEDpin3.d \
 ./Generated_Code/PE_LDD.d \
+./Generated_Code/TI1.d \
+./Generated_Code/TU1.d \
+./Generated_Code/TimerIntLdd1.d \
 ./Generated_Code/Vectors.d \
 ./Generated_Code/WAIT1.d 
 

@@ -39,6 +39,9 @@
 	#define PL_HAS_EVENTS (1)
 	///*ROBO Board can use Events
 
+	#define PL_HAS_TIMER (1)
+	///*ROBO Board has an onboard timer
+
 #elif PL_TARGET_BOARD == KL25ZFRDM
 	#define PL_HAS_LED	(1)
 	///*If 1, an initialization program is run. If 0, no LEDs are on the board
@@ -52,6 +55,12 @@
 	#define PL_HAS_EVENTS (1)
 	///*FRDM Board can use Events
 
+	#define PL_NUM_KEYS (7)
+	///*The joystick shield has 7 buttons
+
+	#define PL_HAS_TIMER (1)
+	///*FRDM Board has an onboard timer
+
 #else
 	#define PL_HAS_LED	(0)
 	///*If 1, an initialization program is run. If 0, no LEDs are on the board
@@ -64,6 +73,9 @@
 
 	#define PL_HAS_EVENTS (0)
 	///*Deactivates Events
+
+	#define PL_NUM_KEYS (0)
+	///*Deactivates Keys interface
 #endif
 
 

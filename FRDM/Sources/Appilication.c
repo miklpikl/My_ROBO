@@ -12,4 +12,17 @@
 #include "Event.h"
 #include "RTOS.h"
 
+void APP_HandleEvents(EVENT_Handle event)
+{
+	switch(event)
+	{
+	}
+
+}
+
+void APP_Run(void)
+{
+
+}
+
 

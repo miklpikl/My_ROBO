@@ -50,12 +50,9 @@
   </PATHS>
   <FILES>
     <GeneratedCs>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\AS1.c</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\ASerialLdd1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\BitIoLdd1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\BitIoLdd2.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\BitIoLdd3.c</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\CLS1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\CS1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\Cpu.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\HF1.c</PathName>
@@ -69,7 +66,6 @@
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TI1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TU1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TimerIntLdd1.c</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\UTIL1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\Vectors.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\WAIT1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Project_Settings\Startup_Code\startup.c</PathName>
@@ -84,12 +80,9 @@
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\main.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\AS1.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\ASerialLdd1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\BitIoLdd1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\BitIoLdd2.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\BitIoLdd3.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\CLS1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\CS1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\Cpu.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\HF1.h</PathName>
@@ -107,7 +100,6 @@
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TI1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TU1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\TimerIntLdd1.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\UTIL1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Generated_Code\WAIT1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Application.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\FRDM\Sources\Event.h</PathName>

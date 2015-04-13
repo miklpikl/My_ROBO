@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <GenerationInfo_G_C>
   <Options>
     <ProjectName>FRDM</ProjectName>
@@ -3777,3 +3778,4 @@
     <SrcFile373>Drivers\LEDbit.src=1182953760</SrcFile373>
   </UsedSrcFiles>
 </GenerationInfo_G_C>
+

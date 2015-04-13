@@ -8,7 +8,6 @@
 #include "Platform.h"
 #include "Application.h"
 #include "LED.h"
-#include "CLS1.h"
 #include "WAIT1.h"
 #include "Event.h"
 #include "RTOS.h"

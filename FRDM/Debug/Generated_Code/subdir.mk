@@ -4,9 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Generated_Code/AS1.c \
+../Generated_Code/ASerialLdd1.c \
 ../Generated_Code/BitIoLdd1.c \
 ../Generated_Code/BitIoLdd2.c \
 ../Generated_Code/BitIoLdd3.c \
+../Generated_Code/CLS1.c \
 ../Generated_Code/CS1.c \
 ../Generated_Code/Cpu.c \
 ../Generated_Code/HF1.c \
@@ -20,13 +23,17 @@ C_SRCS += \
 ../Generated_Code/TI1.c \
 ../Generated_Code/TU1.c \
 ../Generated_Code/TimerIntLdd1.c \
+../Generated_Code/UTIL1.c \
 ../Generated_Code/Vectors.c \
 ../Generated_Code/WAIT1.c 
 
 OBJS += \
+./Generated_Code/AS1.o \
+./Generated_Code/ASerialLdd1.o \
 ./Generated_Code/BitIoLdd1.o \
 ./Generated_Code/BitIoLdd2.o \
 ./Generated_Code/BitIoLdd3.o \
+./Generated_Code/CLS1.o \
 ./Generated_Code/CS1.o \
 ./Generated_Code/Cpu.o \
 ./Generated_Code/HF1.o \
@@ -40,13 +47,17 @@ OBJS += \
 ./Generated_Code/TI1.o \
 ./Generated_Code/TU1.o \
 ./Generated_Code/TimerIntLdd1.o \
+./Generated_Code/UTIL1.o \
 ./Generated_Code/Vectors.o \
 ./Generated_Code/WAIT1.o 
 
 C_DEPS += \
+./Generated_Code/AS1.d \
+./Generated_Code/ASerialLdd1.d \
 ./Generated_Code/BitIoLdd1.d \
 ./Generated_Code/BitIoLdd2.d \
 ./Generated_Code/BitIoLdd3.d \
+./Generated_Code/CLS1.d \
 ./Generated_Code/CS1.d \
 ./Generated_Code/Cpu.d \
 ./Generated_Code/HF1.d \
@@ -60,6 +71,7 @@ C_DEPS += \
 ./Generated_Code/TI1.d \
 ./Generated_Code/TU1.d \
 ./Generated_Code/TimerIntLdd1.d \
+./Generated_Code/UTIL1.d \
 ./Generated_Code/Vectors.d \
 ./Generated_Code/WAIT1.d 
 

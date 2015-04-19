@@ -1,0 +1,76 @@
+/*
+ * Key.c
+ *
+ *  Created on: Apr 14, 2015
+ *      Author: MiklPikl
+ */
+
+#include "Platform.h"
+#if PL_HAS_KEYS
+	#include "Key.h"
+#endif
+#if PL_HAS_EVENTS
+	#include "Event.h"
+#endif
+
+#if PL_HAS_KBI
+
+void KEY_OnInterrupt(KEY_Buttons button)
+{
+	switch(button)
+	{
+		#if PL_NUM_KEYS >= 1
+		case KEY_BTN1:
+			EVENT_Set(EVENT_SW1_Press);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 2
+		case KEY_BTN2:
+			EVENT_Set(EVENT_SW2_Press);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 3
+		case KEY_BTN3:
+			EVENT_Set(EVENT_SW3_Press);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 4
+		case KEY_BTN4:
+			EVENT_Set(EVENT_SW4_Press);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 5
+		case KEY_BTN5:
+			EVENT_Set(EVENT_SW5_Press);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 6
+		case KEY_BTN6:
+			EVENT_Set(EVENT_SW6_Press);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 7
+		case KEY_BTN7:
+			EVENT_Set(EVENT_SW7_Press);
+			break;
+		#endif
+
+		default:
+			///*Nothing set here
+			break;
+	}
+}
+#endif
+
+void KEY_EnableInterrupts(void)
+{
+	#if PL_NUM_KEYS >= 1 && !PL_KEY_POLLED_KeyA
+		KeyA_Enable();
+	#endif
+}

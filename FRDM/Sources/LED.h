@@ -36,7 +36,6 @@
 
 #if PL_NUM_LEDS >= 1
 
-
 	#define LED1_ON			LED1_On()
 	#define LED1_OFF		LED1_Off()
 	#define LED1_TOGGLE		LED1_Neg()
@@ -46,7 +45,6 @@
 	#define LED1_DEINIT		///*Do Nothing
 
 #if PL_NUM_LEDS >= 2
-
 
 	#define LED2_ON			LED2_On()
 	#define LED2_OFF		LED2_Off()
@@ -59,7 +57,6 @@
 
 #if PL_NUM_LEDS >= 3 && (PL_TARGET_BOARD == KL25ZFRDM)
 
-
 	#define LED3_ON			LED3_On()
 	#define LED3_OFF		LED3_Off()
 	#define LED3_TOGGLE		LED3_Neg()
@@ -67,6 +64,16 @@
 	#define LED3_PUT(val)	LED3_Put(val)
 	#define	LED3_INIT		LED3_Init()
 	#define LED3_DEINIT		///*Do Nothing
+#else
+
+	#define LED3_ON			///*Do Nothing
+	#define LED3_OFF		///*Do Nothing
+	#define LED3_TOGGLE		///*Do Nothing
+	#define LED3_GET		///*Do Nothing
+	#define LED3_PUT(val)	///*Do Nothing
+	#define	LED3_INIT		///*Do Nothing
+	#define LED3_DEINIT		///*Do Nothing
+
 #endif
 
 #else

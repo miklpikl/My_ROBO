@@ -1,0 +1,54 @@
+/*
+ * Key.c
+ *
+ *  Created on: Apr 14, 2015
+ *      Author: MiklPikl
+ */
+
+#include "Platform.h"
+#if PL_HAS_KEYS
+	#include "Key.h"
+#endif
+#if PL_HAS_EVENTS
+	#include "Event.h"
+#endif
+
+#if KL_HAS_KBI
+
+void KEY_OnInterrupt(KEY_Buttons button)
+{
+	switch(button)
+	{
+		#if PL_NUM_KEYS >= 1
+			KEY_BTN1:
+
+		#endif
+
+		#if PL_NUM_KEYS >= 2
+			KEY_BTN2,	///*First Button
+		#endif
+
+		#if PL_NUM_KEYS >= 3
+			KEY_BTN3,	///*First Button
+		#endif
+
+		#if PL_NUM_KEYS >= 4
+			KEY_BTN4,	///*First Button
+		#endif
+
+		#if PL_NUM_KEYS >= 5
+			KEY_BTN5,	///*First Button
+		#endif
+
+		#if PL_NUM_KEYS >= 6
+			KEY_BTN6,	///*First Button
+		#endif
+
+		#if PL_NUM_KEYS >= 7
+			KEY_BTN7,	///*First Button
+		#endif
+	}
+}
+
+
+

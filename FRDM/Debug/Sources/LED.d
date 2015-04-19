@@ -18,7 +18,16 @@ Sources/LED.o: ../Sources/LED.c ../Sources/LED.h ../Sources/Platform.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/LED3.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/LEDpin3.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/BitIoLdd3.h \
- C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/WAIT1.h
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/WAIT1.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/FreeRTOS.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/FreeRTOSConfig.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/projdefs.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/portable.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/deprecated_definitions.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/portmacro.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/mpu_wrappers.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/task.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/list.h
 
 ../Sources/LED.h:
 
@@ -63,3 +72,21 @@ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROB
 C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/BitIoLdd3.h:
 
 C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/WAIT1.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/FreeRTOS.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/FreeRTOSConfig.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/projdefs.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/portable.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/deprecated_definitions.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/portmacro.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/mpu_wrappers.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/task.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/list.h:

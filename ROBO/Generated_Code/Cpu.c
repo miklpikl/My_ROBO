@@ -7,7 +7,7 @@
 **     Version     : Component 01.014, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : K22P144M100SF5RM, Rev.2, Apr 2013
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-13, 10:48, # CodeGen: 3
+**     Date/Time   : 2015-04-13, 11:42, # CodeGen: 4
 **     Abstract    :
 **
 **     Settings    :
@@ -67,6 +67,9 @@
 #include "LEDpin2.h"
 #include "BitIoLdd2.h"
 #include "WAIT1.h"
+#include "TI1.h"
+#include "TimerIntLdd1.h"
+#include "TU1.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -304,6 +307,9 @@ void PE_low_level_init(void)
   (void)BitIoLdd2_Init(NULL);
   /* ### LEDbit "LED2" init code ... */
   LED2_Init(); /* initializes the driver */
+  /* ### TimerInt_LDD "TimerIntLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)TimerIntLdd1_Init(NULL);
+  /* ### TimerInt "TI1" init code ... */
   /* Enable interrupts of the given priority level */
   Cpu_SetBASEPRI(16U);
 }

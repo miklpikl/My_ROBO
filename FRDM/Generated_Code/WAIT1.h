@@ -6,7 +6,7 @@
 **     Component   : Wait
 **     Version     : Component 01.067, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-12, 15:10, # CodeGen: 1
+**     Date/Time   : 2015-04-18, 19:45, # CodeGen: 13
 **     Abstract    :
 **          Implements busy waiting routines.
 **     Settings    :
@@ -58,6 +58,9 @@
 /* Include inherited beans */
 
 #include "Cpu.h"
+/* include RTOS header files */
+#include "FreeRTOS.h" /* for vTaskDelay() */
+#include "task.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -169,7 +172,7 @@ void WAIT1_Waitms(uint16_t ms);
 */
 
 #define WAIT1_WaitOSms(ms) \
-  WAIT1_Waitms(ms) /* no RTOS used, so use normal wait */
+  vTaskDelay(ms/portTICK_RATE_MS)
 /*
 ** ===================================================================
 **     Method      :  WAIT1_WaitOSms (component Wait)

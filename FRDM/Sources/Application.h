@@ -20,7 +20,9 @@
  */
 
 void APP_HandleEvents(EVENT_Handle event);
+
 /*
+
  * Function Name: APP_Run
  * Function Type: void
  * Date: 13.04.2015

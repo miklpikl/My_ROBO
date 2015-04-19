@@ -53,6 +53,22 @@
 #include "UTIL1.h"
 #include "AS1.h"
 #include "ASerialLdd1.h"
+#include "KeyE.h"
+#include "BitIoLdd8.h"
+#include "KeyF.h"
+#include "BitIoLdd9.h"
+#include "PTA.h"
+#include "KeyA.h"
+#include "ExtIntLdd1.h"
+#include "KeyB.h"
+#include "ExtIntLdd2.h"
+#include "KeyC.h"
+#include "ExtIntLdd3.h"
+#include "KeyKEY.h"
+#include "ExtIntLdd4.h"
+#include "KeyD.h"
+#include "ExtIntLdd5.h"
+#include "FRTOS1.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -89,6 +105,135 @@ void Cpu_OnNMIINT(void);
 ** ===================================================================
 */
 void TI1_OnInterrupt(void);
+
+void KeyD_OnInterrupt(void);
+/*
+** ===================================================================
+**     Event       :  KeyD_OnInterrupt (module Events)
+**
+**     Component   :  KeyD [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void KeyKEY_OnInterrupt(void);
+/*
+** ===================================================================
+**     Event       :  KeyKEY_OnInterrupt (module Events)
+**
+**     Component   :  KeyKEY [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void KeyC_OnInterrupt(void);
+/*
+** ===================================================================
+**     Event       :  KeyC_OnInterrupt (module Events)
+**
+**     Component   :  KeyC [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void KeyB_OnInterrupt(void);
+/*
+** ===================================================================
+**     Event       :  KeyB_OnInterrupt (module Events)
+**
+**     Component   :  KeyB [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void KeyA_OnInterrupt(void);
+/*
+** ===================================================================
+**     Event       :  KeyA_OnInterrupt (module Events)
+**
+**     Component   :  KeyA [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void FRTOS1_vApplicationStackOverflowHook(xTaskHandle pxTask, char *pcTaskName);
+/*
+** ===================================================================
+**     Event       :  FRTOS1_vApplicationStackOverflowHook (module Events)
+**
+**     Component   :  FRTOS1 [FreeRTOS]
+**     Description :
+**         if enabled, this hook will be called in case of a stack
+**         overflow.
+**     Parameters  :
+**         NAME            - DESCRIPTION
+**         pxTask          - Task handle
+**       * pcTaskName      - Pointer to task name
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void FRTOS1_vApplicationTickHook(void);
+/*
+** ===================================================================
+**     Event       :  FRTOS1_vApplicationTickHook (module Events)
+**
+**     Component   :  FRTOS1 [FreeRTOS]
+**     Description :
+**         If enabled, this hook will be called by the RTOS for every
+**         tick increment.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void FRTOS1_vApplicationIdleHook(void);
+/*
+** ===================================================================
+**     Event       :  FRTOS1_vApplicationIdleHook (module Events)
+**
+**     Component   :  FRTOS1 [FreeRTOS]
+**     Description :
+**         If enabled, this hook will be called when the RTOS is idle.
+**         This might be a good place to go into low power mode.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void FRTOS1_vApplicationMallocFailedHook(void);
+/*
+** ===================================================================
+**     Event       :  FRTOS1_vApplicationMallocFailedHook (module Events)
+**
+**     Component   :  FRTOS1 [FreeRTOS]
+**     Description :
+**         If enabled, the RTOS will call this hook in case memory
+**         allocation failed.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
 
 /* END Events */
 

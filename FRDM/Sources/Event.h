@@ -22,45 +22,45 @@
 		///*Add all events below this line
 
 		#if PL_NUM_KEYS >= 1
-		EVENT_SW1_Press,
-		EVENT_SW1_Held,
-		EVENT_SW1_Release,
+			EVENT_KeyA_Press,
+			EVENT_KeyA_Held,
+			EVENT_KeyA_Release,
 		#endif
 
 		#if PL_NUM_KEYS >= 2
-			EVENT_SW2_Press,
-			EVENT_SW2_Held,
-			EVENT_SW2_Release,
+			EVENT_KeyB_Press,
+			EVENT_KeyB_Held,
+			EVENT_KeyB_Release,
 		#endif
 
 		#if PL_NUM_KEYS >= 3
-			EVENT_SW3_Press,
-			EVENT_SW3_Held,
-			EVENT_SW3_Release,
+			EVENT_KeyC_Press,
+			EVENT_KeyC_Held,
+			EVENT_KeyC_Release,
 		#endif
 
 		#if PL_NUM_KEYS >= 4
-			EVENT_SW4_Press,
-			EVENT_SW4_Held,
-			EVENT_SW4_Release,
+			EVENT_KeyD_Press,
+			EVENT_KeyD_Held,
+			EVENT_KeyD_Release,
 		#endif
 
 		#if PL_NUM_KEYS >= 5
-			EVENT_SW5_Press,
-			EVENT_SW5_Held,
-			EVENT_SW5_Release,
+			EVENT_KeyE_Press,
+			EVENT_KeyE_Held,
+			EVENT_KeyE_Release,
 		#endif
 
 		#if PL_NUM_KEYS >= 6
-			EVENT_SW6_Press,
-			EVENT_SW6_Held,
-			EVENT_SW6_Release,
+			EVENT_KeyF_Press,
+			EVENT_KeyF_Held,
+			EVENT_KeyF_Release,
 		#endif
 
 		#if PL_NUM_KEYS >= 7
-			EVENT_SW7_Press,
-			EVENT_SW7_Held,
-			EVENT_SW7_Release,
+			EVENT_KeyKEY_Press,
+			EVENT_KeyKEY_Held,
+			EVENT_KeyKEY_Release,
 		#endif
 
 		///*End Event List

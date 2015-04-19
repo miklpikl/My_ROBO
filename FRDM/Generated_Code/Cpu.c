@@ -7,7 +7,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-13, 11:35, # CodeGen: 6
+**     Date/Time   : 2015-04-18, 19:45, # CodeGen: 13
 **     Abstract    :
 **
 **     Settings    :
@@ -59,7 +59,7 @@
 
 /* MODULE Cpu. */
 
-/* {Default RTOS Adapter} No RTOS includes */
+#include "FreeRTOS.h" /* FreeRTOS interface */
 #include "LED1.h"
 #include "LEDpin1.h"
 #include "BitIoLdd1.h"
@@ -79,6 +79,22 @@
 #include "UTIL1.h"
 #include "AS1.h"
 #include "ASerialLdd1.h"
+#include "KeyE.h"
+#include "BitIoLdd8.h"
+#include "KeyF.h"
+#include "BitIoLdd9.h"
+#include "PTA.h"
+#include "KeyA.h"
+#include "ExtIntLdd1.h"
+#include "KeyB.h"
+#include "ExtIntLdd2.h"
+#include "KeyC.h"
+#include "ExtIntLdd3.h"
+#include "KeyKEY.h"
+#include "ExtIntLdd4.h"
+#include "KeyD.h"
+#include "ExtIntLdd5.h"
+#include "FRTOS1.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -94,6 +110,24 @@ extern "C" {
 volatile uint8_t SR_reg;               /* Current value of the FAULTMASK register */
 volatile uint8_t SR_lock = 0x00U;      /* Lock */
 
+
+/*
+** ===================================================================
+**     Method      :  Cpu_Cpu_ivINT_PORTA (component MKL25Z128LK4)
+**
+**     Description :
+**         This ISR services the ivINT_PORTA interrupt shared by several 
+**         components.
+**         This method is internal. It is used by Processor Expert only.
+** ===================================================================
+*/
+PE_ISR(Cpu_ivINT_PORTA)
+{
+  ExtIntLdd2_Interrupt();              /* Call the service routine */
+  ExtIntLdd3_Interrupt();              /* Call the service routine */
+  ExtIntLdd4_Interrupt();              /* Call the service routine */
+  ExtIntLdd5_Interrupt();              /* Call the service routine */
+}
 
 /*
 ** ===================================================================
@@ -144,8 +178,11 @@ void __init_hardware(void)
   /* System clock initialization */
   /* SIM_CLKDIV1: OUTDIV1=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,OUTDIV4=3,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0 */
   SIM_CLKDIV1 = (SIM_CLKDIV1_OUTDIV1(0x00) | SIM_CLKDIV1_OUTDIV4(0x03)); /* Set the system prescalers to safe value */
-  /* SIM_SCGC5: PORTE=1,PORTA=1 */
-  SIM_SCGC5 |= (SIM_SCGC5_PORTE_MASK | SIM_SCGC5_PORTA_MASK); /* Enable clock gate for ports to enable pin routing */
+  /* SIM_SCGC5: PORTE=1,PORTD=1,PORTC=1,PORTA=1 */
+  SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK |
+               SIM_SCGC5_PORTD_MASK |
+               SIM_SCGC5_PORTC_MASK |
+               SIM_SCGC5_PORTA_MASK;   /* Enable clock gate for ports to enable pin routing */
   /* SIM_SCGC5: LPTMR=1 */
   SIM_SCGC5 |= SIM_SCGC5_LPTMR_MASK;
   if ((PMC_REGSC & PMC_REGSC_ACKISO_MASK) != 0x0U) {
@@ -222,12 +259,6 @@ void PE_low_level_init(void)
     PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
   #endif
       /* Initialization of the SIM module */
-  /* PORTA_PCR4: ISF=0,MUX=7 */
-  PORTA_PCR4 = (uint32_t)((PORTA_PCR4 & (uint32_t)~(uint32_t)(
-                PORT_PCR_ISF_MASK
-               )) | (uint32_t)(
-                PORT_PCR_MUX(0x07)
-               ));
         /* Initialization of the RCM module */
   /* RCM_RPFW: RSTFLTSEL=0 */
   RCM_RPFW &= (uint8_t)~(uint8_t)(RCM_RPFW_RSTFLTSEL(0x1F));
@@ -262,6 +293,24 @@ void PE_low_level_init(void)
   /* SMC_PMPROT: ??=0,??=0,AVLP=0,??=0,ALLS=0,??=0,AVLLS=0,??=0 */
   SMC_PMPROT = 0x00U;                  /* Setup Power mode protection register */
   /* Common initialization of the CPU registers */
+  /* PORTA_ISFR: ISF=0x10 */
+  PORTA_ISFR = PORT_ISFR_ISF(0x10);
+  /* Common initialization of the CPU registers */
+  /* PORTA_PCR4: ISF=0,IRQC=0x0A */
+  PORTA_PCR4 = (uint32_t)((PORTA_PCR4 & (uint32_t)~(uint32_t)(
+                PORT_PCR_ISF_MASK |
+                PORT_PCR_IRQC(0x05)
+               )) | (uint32_t)(
+                PORT_PCR_IRQC(0x0A)
+               ));
+  /* NVIC_ISER: SETENA|=0x40000000 */
+  NVIC_ISER |= NVIC_ISER_SETENA(0x40000000);
+  /* NVIC_IPR7: PRI_30=0 */
+  NVIC_IPR7 &= (uint32_t)~(uint32_t)(NVIC_IP_PRI_30(0xFF));
+  /* GPIOD_PDDR: PDD&=~0x10 */
+  GPIOD_PDDR &= (uint32_t)~(uint32_t)(GPIO_PDDR_PDD(0x10));
+  /* GPIOA_PDDR: PDD&=~0x3030 */
+  GPIOA_PDDR &= (uint32_t)~(uint32_t)(GPIO_PDDR_PDD(0x3030));
   /* PORTA_PCR20: ISF=0,MUX=7 */
   PORTA_PCR20 = (uint32_t)((PORTA_PCR20 & (uint32_t)~(uint32_t)(
                  PORT_PCR_ISF_MASK
@@ -292,7 +341,30 @@ void PE_low_level_init(void)
   AS1_Init();
   /* ### Shell "CLS1" init code ... */
   CLS1_Init(); /* initialize shell */
-  __EI();
+  /* ### BitIO_LDD "BitIoLdd8" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd8_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd9" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd9_Init(NULL);
+  /* ### Init_GPIO "PTA" init code ... */
+  PTA_Init();
+
+
+  /* ### ExtInt_LDD "ExtIntLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)ExtIntLdd1_Init(NULL);
+  /* ### ExtInt_LDD "ExtIntLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)ExtIntLdd2_Init(NULL);
+  /* ### ExtInt_LDD "ExtIntLdd3" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)ExtIntLdd3_Init(NULL);
+  /* ### ExtInt_LDD "ExtIntLdd4" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)ExtIntLdd4_Init(NULL);
+  /* ### ExtInt_LDD "ExtIntLdd5" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)ExtIntLdd5_Init(NULL);
+  /* ### FreeRTOS "FRTOS1" init code ... */
+#if configSYSTICK_USE_LOW_POWER_TIMER
+  /* enable clocking for low power timer, otherwise vPortStopTickTimer() will crash */
+  SIM_PDD_SetClockGate(SIM_BASE_PTR, SIM_PDD_CLOCK_GATE_LPTMR0, PDD_ENABLE);
+#endif
+  vPortStopTickTimer(); /* tick timer shall not run until the RTOS scheduler is started */
 }
   /* Flash configuration field */
   __attribute__ ((section (".cfmconfig"))) const uint8_t _cfm[0x10] = {
@@ -322,8 +394,8 @@ void PE_low_level_init(void)
     0xFFU,
    /* NV_FSEC: KEYEN=1,MEEN=3,FSLACC=3,SEC=2 */
     0x7EU,
-   /* NV_FOPT: ??=1,??=1,FAST_INIT=1,LPBOOT1=1,RESET_PIN_CFG=1,NMI_DIS=1,??=1,LPBOOT0=1 */
-    0xFFU,
+   /* NV_FOPT: ??=1,??=1,FAST_INIT=1,LPBOOT1=1,RESET_PIN_CFG=1,NMI_DIS=0,??=1,LPBOOT0=1 */
+    0xFBU,
     0xFFU,
     0xFFU
   };

@@ -6,7 +6,7 @@
 **     Component   : PE_Types
 **     Version     : Driver 01.01
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-13, 11:35, # CodeGen: 6
+**     Date/Time   : 2015-04-18, 19:45, # CodeGen: 13
 **     Abstract    :
 **         PE_Types.h - contains definitions of basic types,
 **         register access macros and hardware specific macros
@@ -211,6 +211,13 @@ typedef unsigned long int       uint32;
 #define PE_LDD_COMPONENT_TU1_ID                  0x03U
 #define PE_LDD_COMPONENT_TimerIntLdd1_ID         0x04U
 #define PE_LDD_COMPONENT_ASerialLdd1_ID          0x05U
+#define PE_LDD_COMPONENT_BitIoLdd8_ID            0x06U
+#define PE_LDD_COMPONENT_BitIoLdd9_ID            0x07U
+#define PE_LDD_COMPONENT_ExtIntLdd1_ID           0x08U
+#define PE_LDD_COMPONENT_ExtIntLdd2_ID           0x09U
+#define PE_LDD_COMPONENT_ExtIntLdd3_ID           0x0AU
+#define PE_LDD_COMPONENT_ExtIntLdd4_ID           0x0BU
+#define PE_LDD_COMPONENT_ExtIntLdd5_ID           0x0CU
 
 /*
 ** ===================================================================
@@ -251,7 +258,7 @@ extern void PE_FillMemory(register void* SourceAddressPtr, register uint8_t c, r
 ** RTOS specific types and constants
 ** ===================================================================
 */
-/* {Default RTOS Adapter} RTOS specific definition of type of Ioctl() command constants */
+/* {FreeRTOS RTOS Adapter} RTOS specific definition of type of Ioctl() command constants */
 
 
 /*
@@ -259,7 +266,7 @@ extern void PE_FillMemory(register void* SourceAddressPtr, register uint8_t c, r
 ** Published RTOS settings and constants
 ** ===================================================================
 */
-/* {Default RTOS Adapter} No published RTOS settings */
+/* {FreeRTOS RTOS Adapter} No published RTOS settings */
 
 
 /*

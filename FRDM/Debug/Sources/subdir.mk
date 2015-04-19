@@ -8,6 +8,7 @@ C_SRCS += \
 ../Sources/Event.c \
 ../Sources/Events.c \
 ../Sources/Function_Template.c \
+../Sources/Key.c \
 ../Sources/LED.c \
 ../Sources/Platform.c \
 ../Sources/RTOS.c \
@@ -19,6 +20,7 @@ OBJS += \
 ./Sources/Event.o \
 ./Sources/Events.o \
 ./Sources/Function_Template.o \
+./Sources/Key.o \
 ./Sources/LED.o \
 ./Sources/Platform.o \
 ./Sources/RTOS.o \
@@ -30,6 +32,7 @@ C_DEPS += \
 ./Sources/Event.d \
 ./Sources/Events.d \
 ./Sources/Function_Template.d \
+./Sources/Key.d \
 ./Sources/LED.d \
 ./Sources/Platform.d \
 ./Sources/RTOS.d \

@@ -5,7 +5,7 @@
 **     Processor   : MKL25Z128VLK4
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-13, 11:35, # CodeGen: 6
+**     Date/Time   : 2015-04-18, 19:45, # CodeGen: 13
 **     Abstract    :
 **
 **     Settings    :
@@ -55,8 +55,8 @@
 
 /* MODULE PE_LDD. */
 
-/* {Default RTOS Adapter} No RTOS includes */
-/* {Default RTOS Adapter} No RTOS driver includes */
+#include "FreeRTOS.h" /* FreeRTOS interface */
+/* {FreeRTOS RTOS Adapter} No RTOS driver includes */
 
 #include "PE_LDD.h"
 #include "Cpu.h"
@@ -68,7 +68,14 @@
 ** Array of initialized device structures of LDD components.
 ** ===========================================================================
 */
-LDD_TDeviceData *PE_LDD_DeviceDataList[6] = {
+LDD_TDeviceData *PE_LDD_DeviceDataList[13] = {
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
     NULL,
     NULL,
     NULL,
@@ -150,6 +157,12 @@ bool PE_PeripheralUsed(uint32_t PrphBaseAddress)
     case 0x40040000UL:
     /* Base address allocated by peripheral(s) UART0 */
     case 0x4006A000UL:
+    /* Base address allocated by peripheral(s) PTC */
+    case 0x400FF080UL:
+    /* Base address allocated by peripheral(s) PTD */
+    case 0x400FF0C0UL:
+    /* Base address allocated by peripheral(s) PTA */
+    case 0x400FF000UL:
       result = TRUE;
       break;
     default:

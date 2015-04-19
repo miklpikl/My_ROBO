@@ -19,7 +19,7 @@ Sources/Platform.o: ../Sources/Platform.c ../Sources/Platform.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/LED3.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/LEDpin3.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/BitIoLdd3.h \
- ../Sources/RTOS.h ../Sources/Event.h
+ ../Sources/RTOS.h ../Sources/Timer.h ../Sources/Event.h
 
 ../Sources/Platform.h:
 
@@ -64,5 +64,7 @@ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROB
 C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/BitIoLdd3.h:
 
 ../Sources/RTOS.h:
+
+../Sources/Timer.h:
 
 ../Sources/Event.h:

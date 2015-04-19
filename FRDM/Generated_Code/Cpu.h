@@ -7,7 +7,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-13, 10:48, # CodeGen: 4
+**     Date/Time   : 2015-04-18, 19:45, # CodeGen: 13
 **     Abstract    :
 **
 **     Settings    :
@@ -146,6 +146,19 @@ extern volatile uint8_t SR_reg;        /* Current FAULTMASK register */
 extern volatile uint8_t SR_lock;
 
 
+/* {FreeRTOS RTOS Adapter} ISR function prototype */
+PE_ISR(Cpu_ivINT_PORTA);
+/*
+** ===================================================================
+**     Method      :  Cpu_Cpu_ivINT_PORTA (component MKL25Z128LK4)
+**
+**     Description :
+**         This ISR services the ivINT_PORTA interrupt shared by several 
+**         components.
+**         This method is internal. It is used by Processor Expert only.
+** ===================================================================
+*/
+
 /*
 ** ===================================================================
 **     Method      :  PE_low_level_init (component MKL25Z128LK4)
@@ -159,7 +172,7 @@ extern volatile uint8_t SR_lock;
 */
 void PE_low_level_init(void);
 
-/* {Default RTOS Adapter} ISR function prototype */
+/* {FreeRTOS RTOS Adapter} ISR function prototype */
 PE_ISR(Cpu_INT_NMIInterrupt);
 /*
 ** ===================================================================

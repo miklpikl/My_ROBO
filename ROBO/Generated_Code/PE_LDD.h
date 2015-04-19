@@ -5,7 +5,7 @@
 **     Processor   : MK22FX512VLQ12
 **     Version     : Component 01.014, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-12, 14:46, # CodeGen: 2
+**     Date/Time   : 2015-04-13, 11:42, # CodeGen: 4
 **     Abstract    :
 **
 **     Settings    :
@@ -67,6 +67,9 @@
 #include "LEDpin2.h"
 #include "BitIoLdd2.h"
 #include "WAIT1.h"
+#include "TI1.h"
+#include "TimerIntLdd1.h"
+#include "TU1.h"
 
 
 /*

@@ -28,6 +28,14 @@
 - \subpage TU1
 - \subpage TimerIntLdd1
 - \subpage ASerialLdd1
+- \subpage BitIoLdd8
+- \subpage BitIoLdd9
+- \subpage PTA
+- \subpage ExtIntLdd1
+- \subpage ExtIntLdd2
+- \subpage ExtIntLdd3
+- \subpage ExtIntLdd4
+- \subpage ExtIntLdd5
 
 */
 

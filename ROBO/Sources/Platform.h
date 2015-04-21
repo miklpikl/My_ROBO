@@ -44,6 +44,9 @@
 	#define PL_HAS_TIMER (1)
 	///*ROBO Board has an on board timer
 
+	#define PL_HAS_KEYS (1)
+	///*ROBO Board has one button
+
 	#define PL_NUM_KEYS (1)
 	///* ROBO board has up to one push button
 

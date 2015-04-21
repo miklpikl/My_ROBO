@@ -1,7 +1,7 @@
 /* ###################################################################
 **     Filename    : Events.h
 **     Project     : FRDM
-**     Processor   : MKL25Z128VLK4
+**     Processor   : MK22FX512VLQ12
 **     Component   : Events
 **     Version     : Driver 01.00
 **     Compiler    : GNU C Compiler
@@ -40,9 +40,6 @@
 #include "LED2.h"
 #include "LEDpin2.h"
 #include "BitIoLdd2.h"
-#include "LED3.h"
-#include "LEDpin3.h"
-#include "BitIoLdd3.h"
 #include "WAIT1.h"
 #include "CS1.h"
 #include "HF1.h"
@@ -53,25 +50,15 @@
 #include "UTIL1.h"
 #include "AS1.h"
 #include "ASerialLdd1.h"
-#include "KeyE.h"
-#include "BitIoLdd8.h"
-#include "KeyF.h"
-#include "BitIoLdd9.h"
 #include "PTA.h"
 #include "KeyA.h"
 #include "ExtIntLdd1.h"
-#include "KeyB.h"
-#include "ExtIntLdd2.h"
-#include "KeyC.h"
-#include "ExtIntLdd3.h"
-#include "KeyKEY.h"
-#include "ExtIntLdd4.h"
-#include "KeyD.h"
-#include "ExtIntLdd5.h"
 #include "FRTOS1.h"
 #include "RTOSTRC1.h"
-#include "Buzzer.h"
+#include "BUZ1.h"
 #include "BitIoLdd4.h"
+#include "Buzzer.h"
+
 
 #ifdef __cplusplus
 extern "C" {

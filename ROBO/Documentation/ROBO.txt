@@ -26,17 +26,6 @@ Module "LED2"      (component LEDbit)
    - LED2_SetRatio16 -Method to specify the duty cycle. If using a PWM pin, this means the duty cycle is set. For On/off pins, 
                 values smaller 0x7FFF means off, while values greater means on.
 
-Module "LED3"      (component LEDbit)
-   - LED3_Init -Performs the LED driver initialization.
-   - LED3_Deinit -Deinitializes the driver
-   - LED3_On -This turns the LED on.
-   - LED3_Off -This turns the LED off.
-   - LED3_Neg -This negates/toggles the LED
-   - LED3_Get -This returns logical 1 in case the LED is on, 0 otherwise.
-   - LED3_Put -Turns the LED on or off.
-   - LED3_SetRatio16 -Method to specify the duty cycle. If using a PWM pin, this means the duty cycle is set. For On/off pins, 
-                values smaller 0x7FFF means off, while values greater means on.
-
 Module "WAIT1"     (component Wait)
    - WAIT1_Wait10Cycles -Wait for 10 CPU cycles.
    - WAIT1_Wait100Cycles -Wait for 100 CPU cycles.
@@ -188,16 +177,6 @@ Module "AS1"       (component Serial)
    - AS1_GetCharsInTxBuf -Returns the number of characters in the output buffer. This method is available only if the 
                 transmitter property is enabled.
 
-Module "KeyE"      (component BitIO)
-   - KeyE_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
-                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
-                limitations). This method cannot be disabled if direction is [input].
-
-Module "KeyF"      (component BitIO)
-   - KeyF_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
-                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
-                limitations). This method cannot be disabled if direction is [input].
-
 Module "PTA"       (component Init_GPIO_VAR0)
    - PTA_Init -This method initializes registers of the GPIO module according to the Peripheral Initialization settings. Call 
                 this method in user code to initialize the module. By default, the method is called by PE automatically; see 
@@ -209,34 +188,6 @@ Module "KeyA"      (component ExtInt)
    - KeyA_Disable -Disable the component - the external events are not accepted. This method is available only if HW module 
                 allows enable/disable of the interrupt.
    - KeyA_GetVal -Returns the actual value of the input pin of the component.
-
-Module "KeyB"      (component ExtInt)
-   - KeyB_Enable -Enable the component - the external events are accepted. This method is available only if HW module allows 
-                enable/disable of the interrupt.
-   - KeyB_Disable -Disable the component - the external events are not accepted. This method is available only if HW module 
-                allows enable/disable of the interrupt.
-   - KeyB_GetVal -Returns the actual value of the input pin of the component.
-
-Module "KeyC"      (component ExtInt)
-   - KeyC_Enable -Enable the component - the external events are accepted. This method is available only if HW module allows 
-                enable/disable of the interrupt.
-   - KeyC_Disable -Disable the component - the external events are not accepted. This method is available only if HW module 
-                allows enable/disable of the interrupt.
-   - KeyC_GetVal -Returns the actual value of the input pin of the component.
-
-Module "KeyKEY"    (component ExtInt)
-   - KeyKEY_Enable -Enable the component - the external events are accepted. This method is available only if HW module allows 
-                enable/disable of the interrupt.
-   - KeyKEY_Disable -Disable the component - the external events are not accepted. This method is available only if HW module 
-                allows enable/disable of the interrupt.
-   - KeyKEY_GetVal -Returns the actual value of the input pin of the component.
-
-Module "KeyD"      (component ExtInt)
-   - KeyD_Enable -Enable the component - the external events are accepted. This method is available only if HW module allows 
-                enable/disable of the interrupt.
-   - KeyD_Disable -Disable the component - the external events are not accepted. This method is available only if HW module 
-                allows enable/disable of the interrupt.
-   - KeyD_GetVal -Returns the actual value of the input pin of the component.
 
 Module "FRTOS1"    (component FreeRTOS)
    - FRTOS1_xTaskCreate -Create a new task and add it to the list of tasks that are ready to run.
@@ -658,6 +609,20 @@ Module "FRTOS1"    (component FreeRTOS)
    - FRTOS1_Init -Low level initialization routine called from startup code. This method ensures that the tick timer is  not 
                 enabled.
 
-Module "Cpu"       (component MKL25Z128LK4)
+Module "BUZ1"      (component BitIO)
+   - BUZ1_SetDir -Sets a pin direction (available only if the direction = _[input/output]_).
+   - BUZ1_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+   - BUZ1_PutVal -The specified output value is set. If the direction is [input], the component saves the value to a memory or 
+                a register and this value will be written to the pin after switching to the output mode (using [SetDir(TRUE)]; 
+                see <Safe mode> property for limitations). If the direction is [output], it writes the value to the pin. 
+                (Method is available only if the direction = _[output]_ or _[input/output]_).
+   - BUZ1_ClrVal -Clears (set to zero) the output value. It is equivalent to the [PutVal(FALSE)]. This method is available only 
+                if the direction = _[output]_ or _[input/output]_.
+   - BUZ1_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if the 
+                direction = _[output]_ or _[input/output]_.
+
+Module "Cpu"       (component MK22FN1M0LQ12)
 
 ===================================================================================

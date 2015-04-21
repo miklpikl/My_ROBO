@@ -24,7 +24,7 @@
 #endif
 
 ///*Software Timer Implementation
-#define USE_SW_TIMERS 0
+#define USE_SW_TIMERS 1
 ///*Only for use with ROBO Board
 
 ///*Implements a Software Timer

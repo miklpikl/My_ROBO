@@ -697,7 +697,7 @@ PE_DEBUGHALT();
         <Interrupt v="INT_LPTimer" />
         <Interrupt_priority v="medium priority" />
       </boolgroup>
-      <Interrupt_period v="1 ms" />
+      <Interrupt_period v="10 ms" />
       <Same_period_in_modes v="yes" />
       <Component_uses_entire_timer v="no" />
       <group name="Initialization">
@@ -720,7 +720,7 @@ PE_DEBUGHALT();
               <Interrupt v="INT_LPTimer" />
               <Interrupt_priority v="medium priority" />
             </boolgroup>
-            <Interrupt_period v="1 ms" />
+            <Interrupt_period v="10 ms" />
             <group name="Initialization">
               <Enabled_in_init__code v="yes" />
               <list name="Auto Initialization" v="1">
@@ -814,7 +814,7 @@ PE_DEBUGHALT();
       </enumgroup>
       <enumgroup name="Counter restart" v="On-match">
         <Period_device v="LPTMR0_CMR" />
-        <Period v="1 ms" />
+        <Period v="10 ms" />
         <boolgroup name="Interrupt" v="Enabled">
           <Interrupt v="INT_LPTimer" />
           <Interrupt_priority v="medium priority" />
@@ -1235,10 +1235,10 @@ PE_DEBUGHALT();
         <Properties>
           <Component_name v="BitIoLdd8" />
           <Pin_for_I_O v="CMP0_IN2/PTC8/I2C0_SCL/TPM0_CH4" />
-          <Direction v="Input/Output" />
+          <Direction v="Input" />
           <group name="Initialization">
-            <Init__direction v="Output" />
-            <Init__value v="0" />
+            <Init__direction v="Input" />
+            <Init__value v="1" />
             <Auto_initialization v="yes" />
           </group>
           <Safe_mode v="no" />
@@ -1247,13 +1247,13 @@ PE_DEBUGHALT();
           <Init v="generate code" />
           <Deinit v="don&amp;apos;t generate code" />
           <GetDir v="don&amp;apos;t generate code" />
-          <SetDir v="generate code" />
+          <SetDir v="don&amp;apos;t generate code" />
           <SetInput v="don&amp;apos;t generate code" />
           <SetOutput v="don&amp;apos;t generate code" />
           <GetVal v="generate code" />
-          <PutVal v="generate code" />
-          <ClrVal v="generate code" />
-          <SetVal v="generate code" />
+          <PutVal v="don&amp;apos;t generate code" />
+          <ClrVal v="don&amp;apos;t generate code" />
+          <SetVal v="don&amp;apos;t generate code" />
           <NegVal v="don&amp;apos;t generate code" />
           <ConnectPin v="don&amp;apos;t generate code" />
           <GetRawVal v="don&amp;apos;t generate code" />
@@ -1262,23 +1262,23 @@ PE_DEBUGHALT();
           <EmptySection_DummyValue />
         </Events>
       </inhrbean>
-      <Direction v="Input/Output" />
+      <Direction v="Input" />
       <group name="Initialization">
-        <Init__direction v="Output" />
-        <Init__value v="0" />
+        <Init__direction v="Input" />
+        <Init__value v="1" />
       </group>
       <Safe_mode v="no" />
       <Optimization_for v="speed" />
     </Properties>
     <Methods>
       <GetDir v="don&amp;apos;t generate code" />
-      <SetDir v="generate code" />
+      <SetDir v="don&amp;apos;t generate code" />
       <SetInput v="don&amp;apos;t generate code" />
       <SetOutput v="don&amp;apos;t generate code" />
       <GetVal v="generate code" />
-      <PutVal v="generate code" />
-      <ClrVal v="generate code" />
-      <SetVal v="generate code" />
+      <PutVal v="don&amp;apos;t generate code" />
+      <ClrVal v="don&amp;apos;t generate code" />
+      <SetVal v="don&amp;apos;t generate code" />
       <NegVal v="don&amp;apos;t generate code" />
       <ConnectPin v="don&amp;apos;t generate code" />
       <GetRawVal v="don&amp;apos;t generate code" />
@@ -1298,10 +1298,10 @@ PE_DEBUGHALT();
         <Properties>
           <Component_name v="BitIoLdd9" />
           <Pin_for_I_O v="CMP0_IN3/PTC9/I2C0_SDA/TPM0_CH5" />
-          <Direction v="Input/Output" />
+          <Direction v="Input" />
           <group name="Initialization">
-            <Init__direction v="Output" />
-            <Init__value v="0" />
+            <Init__direction v="Input" />
+            <Init__value v="1" />
             <Auto_initialization v="yes" />
           </group>
           <Safe_mode v="no" />
@@ -1310,13 +1310,13 @@ PE_DEBUGHALT();
           <Init v="generate code" />
           <Deinit v="don&amp;apos;t generate code" />
           <GetDir v="don&amp;apos;t generate code" />
-          <SetDir v="generate code" />
+          <SetDir v="don&amp;apos;t generate code" />
           <SetInput v="don&amp;apos;t generate code" />
           <SetOutput v="don&amp;apos;t generate code" />
           <GetVal v="generate code" />
-          <PutVal v="generate code" />
-          <ClrVal v="generate code" />
-          <SetVal v="generate code" />
+          <PutVal v="don&amp;apos;t generate code" />
+          <ClrVal v="don&amp;apos;t generate code" />
+          <SetVal v="don&amp;apos;t generate code" />
           <NegVal v="don&amp;apos;t generate code" />
           <ConnectPin v="don&amp;apos;t generate code" />
           <GetRawVal v="don&amp;apos;t generate code" />
@@ -1325,23 +1325,23 @@ PE_DEBUGHALT();
           <EmptySection_DummyValue />
         </Events>
       </inhrbean>
-      <Direction v="Input/Output" />
+      <Direction v="Input" />
       <group name="Initialization">
-        <Init__direction v="Output" />
-        <Init__value v="0" />
+        <Init__direction v="Input" />
+        <Init__value v="1" />
       </group>
       <Safe_mode v="no" />
       <Optimization_for v="speed" />
     </Properties>
     <Methods>
       <GetDir v="don&amp;apos;t generate code" />
-      <SetDir v="generate code" />
+      <SetDir v="don&amp;apos;t generate code" />
       <SetInput v="don&amp;apos;t generate code" />
       <SetOutput v="don&amp;apos;t generate code" />
       <GetVal v="generate code" />
-      <PutVal v="generate code" />
-      <ClrVal v="generate code" />
-      <SetVal v="generate code" />
+      <PutVal v="don&amp;apos;t generate code" />
+      <ClrVal v="don&amp;apos;t generate code" />
+      <SetVal v="don&amp;apos;t generate code" />
       <NegVal v="don&amp;apos;t generate code" />
       <ConnectPin v="don&amp;apos;t generate code" />
       <GetRawVal v="don&amp;apos;t generate code" />
@@ -1367,9 +1367,24 @@ PE_DEBUGHALT();
           <Interrupt_DMA_request v="Interrupt on falling" />
           <Passive_filter v="No initialization" />
         </boolgroup>
-        <boolgroup name="Pin 5" v="Do not initialize" />
-        <boolgroup name="Pin 12" v="Do not initialize" />
-        <boolgroup name="Pin 13" v="Do not initialize" />
+        <boolgroup name="Pin 5" v="Initialize">
+          <Pin_direction v="No initialization" />
+          <Output_value v="No initialization" />
+          <Pull_resistor v="No initialization" />
+          <Interrupt_DMA_request v="Interrupt on falling" />
+        </boolgroup>
+        <boolgroup name="Pin 12" v="Initialize">
+          <Pin_direction v="No initialization" />
+          <Output_value v="No initialization" />
+          <Pull_resistor v="No initialization" />
+          <Interrupt_DMA_request v="Interrupt on falling" />
+        </boolgroup>
+        <boolgroup name="Pin 13" v="Initialize">
+          <Pin_direction v="No initialization" />
+          <Output_value v="No initialization" />
+          <Pull_resistor v="No initialization" />
+          <Interrupt_DMA_request v="Interrupt on falling" />
+        </boolgroup>
         <boolgroup name="Pin 14" v="Do not initialize" />
         <boolgroup name="Pin 15" v="Do not initialize" />
         <boolgroup name="Pin 16" v="Do not initialize" />
@@ -1432,7 +1447,7 @@ rising or falling edge
             <EmptySection_DummyValue />
           </Generate_interrupt_on>
           <Interrupt v="INT_PORTD" />
-          <Interrupt_priority v="medium priority" />
+          <Interrupt_priority v="low priority" />
           <group name="Initialization">
             <Enabled_in_init__code v="yes" />
             <list name="Auto Initialization" v="1">
@@ -1465,7 +1480,7 @@ rising or falling edge
         <EmptySection_DummyValue />
       </Generate_interrupt_on>
       <Interrupt v="INT_PORTD" />
-      <Interrupt_priority v="medium priority" />
+      <Interrupt_priority v="low priority" />
       <group name="Initialization">
         <Enabled_in_init__code v="yes" />
       </group>
@@ -1503,7 +1518,7 @@ rising or falling edge
             <EmptySection_DummyValue />
           </Generate_interrupt_on>
           <Interrupt v="INT_PORTA" />
-          <Interrupt_priority v="medium priority" />
+          <Interrupt_priority v="low priority" />
           <group name="Initialization">
             <Enabled_in_init__code v="yes" />
             <list name="Auto Initialization" v="1">
@@ -1536,7 +1551,7 @@ rising or falling edge
         <EmptySection_DummyValue />
       </Generate_interrupt_on>
       <Interrupt v="INT_PORTA" />
-      <Interrupt_priority v="medium priority" />
+      <Interrupt_priority v="low priority" />
       <group name="Initialization">
         <Enabled_in_init__code v="yes" />
       </group>
@@ -1567,9 +1582,14 @@ rising or falling edge
         <Properties>
           <Component_name v="ExtIntLdd3" />
           <Pin v="TSI0_CH5/PTA4/I2C1_SDA/TPM0_CH1/NMI_b" />
-          <Generate_interrupt_on v="falling edge" />
+          <Generate_interrupt_on sel_value="rising edge">
+            
+rising or falling edge
+
+            <EmptySection_DummyValue />
+          </Generate_interrupt_on>
           <Interrupt v="INT_PORTA" />
-          <Interrupt_priority v="medium priority" />
+          <Interrupt_priority v="low priority" />
           <group name="Initialization">
             <Enabled_in_init__code v="yes" />
             <list name="Auto Initialization" v="1">
@@ -1595,9 +1615,14 @@ rising or falling edge
           </event>
         </Events>
       </inhrbean>
-      <Generate_interrupt_on v="falling edge" />
+      <Generate_interrupt_on sel_value="rising edge">
+        
+rising or falling edge
+
+        <EmptySection_DummyValue />
+      </Generate_interrupt_on>
       <Interrupt v="INT_PORTA" />
-      <Interrupt_priority v="medium priority" />
+      <Interrupt_priority v="low priority" />
       <group name="Initialization">
         <Enabled_in_init__code v="yes" />
       </group>
@@ -1635,7 +1660,7 @@ rising or falling edge
             <EmptySection_DummyValue />
           </Generate_interrupt_on>
           <Interrupt v="INT_PORTA" />
-          <Interrupt_priority v="medium priority" />
+          <Interrupt_priority v="low priority" />
           <group name="Initialization">
             <Enabled_in_init__code v="yes" />
             <list name="Auto Initialization" v="1">
@@ -1668,7 +1693,7 @@ rising or falling edge
         <EmptySection_DummyValue />
       </Generate_interrupt_on>
       <Interrupt v="INT_PORTA" />
-      <Interrupt_priority v="medium priority" />
+      <Interrupt_priority v="low priority" />
       <group name="Initialization">
         <Enabled_in_init__code v="yes" />
       </group>
@@ -1706,7 +1731,7 @@ rising or falling edge
             <EmptySection_DummyValue />
           </Generate_interrupt_on>
           <Interrupt v="INT_PORTA" />
-          <Interrupt_priority v="medium priority" />
+          <Interrupt_priority v="low priority" />
           <group name="Initialization">
             <Enabled_in_init__code v="yes" />
             <list name="Auto Initialization" v="1">
@@ -1739,7 +1764,7 @@ rising or falling edge
         <EmptySection_DummyValue />
       </Generate_interrupt_on>
       <Interrupt v="INT_PORTA" />
-      <Interrupt_priority v="medium priority" />
+      <Interrupt_priority v="low priority" />
       <group name="Initialization">
         <Enabled_in_init__code v="yes" />
       </group>
@@ -1774,18 +1799,106 @@ rising or falling edge
       <Disabled_Interrupts_in_Startup v="yes" />
       <configASSERT_defined v="yes" />
       <Application_Task_Tags v="no" />
-      <Use_Trace_Facility v="no" />
-      <boolgroup name="Trace Hooks" v="Disabled" />
-      <boolgroup name="Collect Runtime Statistics" v="Disabled" />
+      <Use_Trace_Facility v="yes" />
+      <boolgroup name="Trace Hooks" v="Enabled">
+        <inhrbean type="PercepioTrace">
+          <Enabled v="Y" />
+          <Properties>
+            <Component_name v="RTOSTRC1" />
+            <RTOS_Trace_Version v="V2.7.0" />
+            <Utility v="UTIL1" />
+            <Scheduling_only v="no" />
+            <Description_string v="FreeRTOS+Trace" />
+            <Description_max_length v="80" />
+            <group name="Events">
+              <group name="Kernel Service Calls">
+                <group name="Task">
+                  <vTaskDelay v="yes" />
+                  <vTaskDelayUntil v="yes" />
+                </group>
+              </group>
+            </group>
+            <Include_user_events v="yes" />
+            <Include_ISR_tracing v="yes" />
+            <Max_ISR_Nesting v="16" />
+            <Include_object_delete_events v="yes" />
+            <Include_new_time_events v="no" />
+            <Include_ready_events v="yes" />
+            <Include_memory_manager_events v="no" />
+            <Heap_Size_below_16M v="no" />
+            <Trace_Data_Allocation v="static" />
+            <Recorder_store_mode v="Ring Buffer" />
+            <Use_implicit_IFE_rules v="yes" />
+            <Use_16bit_Object_Handles v="no" />
+            <Include_event_stats v="no" />
+            <Event_Count_Size v="256" />
+            <Float_support v="no" />
+            <Event_buffer_size v="1200" />
+            <Symbol_table_size v="400" />
+            <Number_of_tasks v="10" />
+            <Number_of_ISR v="4" />
+            <Number_of_queue v="3" />
+            <Number_of_semaphore v="4" />
+            <Number_of_mutex v="4" />
+            <Number_of_Timer v="2" />
+            <Number_of_Event_Groups v="2" />
+            <Name_length_for_task v="configMAX_TASK_NAME_LEN" />
+            <Name_length_for_ISR v="10" />
+            <Name_length_for_queue v="15" />
+            <Name_length_for_semaphore v="15" />
+            <Name_length_for_mutex v="15" />
+            <Name_length_for_timer v="15" />
+            <Name_length_for_event_group v="15" />
+          </Properties>
+          <Methods>
+            <uiTraceStart v="generate code" />
+            <vTraceStop v="generate code" />
+            <vTraceClear v="generate code" />
+            <uiTraceGetTraceBufferSize v="generate code" />
+            <vTraceGetTraceBuffer v="generate code" />
+            <vTraceSetTimerFrequency v="generate code" />
+            <xTraceOpenLabel v="generate code" />
+            <vTraceUserEvent v="generate code" />
+            <vTracePrintF v="generate code" />
+            <vTraceSetQueueName v="generate code" />
+            <vTraceSetISRProperties v="generate code" />
+            <vTraceStoreISRBegin v="generate code" />
+            <vTraceStoreISREnd v="generate code" />
+            <vTraceTaskSkipDefaultInstanceFinishedEvents v="generate code" />
+            <vTraceTaskInstanceIsFinished v="generate code" />
+            <vTraceExcludeTaskFromSchedulingTrace v="generate code" />
+            <vTraceInitTraceData v="generate code" />
+            <vGetGDBDumpCommand v="generate code" />
+            <vTraceSetStopHook v="generate code" />
+            <xTraceGetLastError v="generate code" />
+            <vTraceClearError v="generate code" />
+            <vTraceTaskInstanceFinish v="generate code" />
+            <vTraceTaskInstanceFinishDirect v="generate code" />
+          </Methods>
+          <Events>
+            <Event_module_name v="Events" />
+            <event name="OnTraceStop" v="don&amp;apos;t generate code" />
+            <event name="OnTraceStart" v="don&amp;apos;t generate code" />
+            <event name="OnTraceWrap" v="generate code">
+              <Event_procedure_name v="RTOSTRC1_OnTraceWrap" />
+            </event>
+          </Events>
+        </inhrbean>
+      </boolgroup>
+      <boolgroup name="Collect Runtime Statistics" v="Enabled">
+        <Use_Tick_Counter v="yes" />
+        <boolgroup name="LDD" v="Disabled" />
+        <boolgroup name="non-LDD" v="Disabled" />
+      </boolgroup>
       <group name="Scheduler">
         <boolgroup name="ColdFire V1" v="Disabled" />
         <boolgroup name="ColdFire V2" v="Disabled" />
         <boolgroup name="Kinetis" v="Enabled">
-          <ARM_Family v="Cortex M4" />
+          <ARM_Family v="Cortex M0+" />
           <Floating_Point_Support v="no" />
-          <Max_SysCall_Interrupt_Priority v="5" />
-          <RTOS_Interrupt_Priority v="15" />
-          <Lowest_Interrupt_Priority v="15" />
+          <Max_SysCall_Interrupt_Priority v="1" />
+          <RTOS_Interrupt_Priority v="3" />
+          <Lowest_Interrupt_Priority v="3" />
           <Compiler_Optimization_Level v="0" />
           <boolgroup name="SysTick" v="Enabled">
             <Core_Clock v="yes" />
@@ -1825,14 +1938,16 @@ rising or falling edge
         <boolgroup name="User Heap Section" v="Disabled" />
         <Total_Heap_Size v="2048" />
       </group>
-      <boolgroup name="Shell" v="Disabled" />
+      <boolgroup name="Shell" v="Enabled">
+        <Shell v="CLS1" />
+      </boolgroup>
       <Utility v="UTIL1" />
     </Properties>
     <Methods>
       <xTaskCreate v="generate code" />
-      <vTaskDelete v="don&amp;apos;t generate code" />
+      <vTaskDelete v="generate code" />
       <vTaskStartScheduler v="generate code" />
-      <vTaskEndScheduler v="don&amp;apos;t generate code" />
+      <vTaskEndScheduler v="generate code" />
       <vTaskSuspend v="generate code" />
       <vTaskSuspendAll v="generate code" />
       <vTaskResume v="generate code" />
@@ -1873,10 +1988,10 @@ rising or falling edge
       <pcTaskGetTaskName v="don&amp;apos;t generate code" />
       <eTaskGetState v="don&amp;apos;t generate code" />
       <xTaskGetSchedulerState v="generate code" />
-      <vTaskList v="don&amp;apos;t generate code" />
+      <vTaskList v="generate code" />
       <uxTaskGetStackHighWaterMark v="generate code" />
       <uxTaskGetNumberOfTasks v="generate code" />
-      <vTaskGetRunTimeStats v="don&amp;apos;t generate code" />
+      <vTaskGetRunTimeStats v="generate code" />
       <uxQueueMessagesWaiting v="generate code" />
       <uxQueueMessagesWaitingfromISR v="generate code" />
       <xQueueCreate v="generate code" />
@@ -1932,7 +2047,7 @@ rising or falling edge
       <xTaskNotify v="generate code" />
       <xTaskNotifyFromISR v="generate code" />
       <xTaskNotifyWait v="generate code" />
-      <ParseCommand v="don&amp;apos;t generate code" />
+      <ParseCommand v="generate code" />
       <Init v="generate code" />
     </Methods>
     <Events>

@@ -189,32 +189,14 @@ Module "AS1"       (component Serial)
                 transmitter property is enabled.
 
 Module "KeyE"      (component BitIO)
-   - KeyE_SetDir -Sets a pin direction (available only if the direction = _[input/output]_).
    - KeyE_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
                 returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
                 limitations). This method cannot be disabled if direction is [input].
-   - KeyE_PutVal -The specified output value is set. If the direction is [input], the component saves the value to a memory or 
-                a register and this value will be written to the pin after switching to the output mode (using [SetDir(TRUE)]; 
-                see <Safe mode> property for limitations). If the direction is [output], it writes the value to the pin. 
-                (Method is available only if the direction = _[output]_ or _[input/output]_).
-   - KeyE_ClrVal -Clears (set to zero) the output value. It is equivalent to the [PutVal(FALSE)]. This method is available only 
-                if the direction = _[output]_ or _[input/output]_.
-   - KeyE_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if the 
-                direction = _[output]_ or _[input/output]_.
 
 Module "KeyF"      (component BitIO)
-   - KeyF_SetDir -Sets a pin direction (available only if the direction = _[input/output]_).
    - KeyF_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
                 returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
                 limitations). This method cannot be disabled if direction is [input].
-   - KeyF_PutVal -The specified output value is set. If the direction is [input], the component saves the value to a memory or 
-                a register and this value will be written to the pin after switching to the output mode (using [SetDir(TRUE)]; 
-                see <Safe mode> property for limitations). If the direction is [output], it writes the value to the pin. 
-                (Method is available only if the direction = _[output]_ or _[input/output]_).
-   - KeyF_ClrVal -Clears (set to zero) the output value. It is equivalent to the [PutVal(FALSE)]. This method is available only 
-                if the direction = _[output]_ or _[input/output]_.
-   - KeyF_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if the 
-                direction = _[output]_ or _[input/output]_.
 
 Module "PTA"       (component Init_GPIO_VAR0)
    - PTA_Init -This method initializes registers of the GPIO module according to the Peripheral Initialization settings. Call 
@@ -675,6 +657,20 @@ Module "FRTOS1"    (component FreeRTOS)
    - FRTOS1_ParseCommand -Shell Command Line Parser
    - FRTOS1_Init -Low level initialization routine called from startup code. This method ensures that the tick timer is  not 
                 enabled.
+
+Module "Buzzer"    (component BitIO)
+   - Buzzer_SetDir -Sets a pin direction (available only if the direction = _[input/output]_).
+   - Buzzer_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+   - Buzzer_PutVal -The specified output value is set. If the direction is [input], the component saves the value to a memory 
+                or a register and this value will be written to the pin after switching to the output mode (using 
+                [SetDir(TRUE)]; see <Safe mode> property for limitations). If the direction is [output], it writes the value to 
+                the pin. (Method is available only if the direction = _[output]_ or _[input/output]_).
+   - Buzzer_ClrVal -Clears (set to zero) the output value. It is equivalent to the [PutVal(FALSE)]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+   - Buzzer_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if 
+                the direction = _[output]_ or _[input/output]_.
 
 Module "Cpu"       (component MKL25Z128LK4)
 

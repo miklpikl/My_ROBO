@@ -36,6 +36,7 @@ C_SRCS += \
 ../Generated_Code/LEDpin3.c \
 ../Generated_Code/PE_LDD.c \
 ../Generated_Code/PTA.c \
+../Generated_Code/RTOSTRC1.c \
 ../Generated_Code/TI1.c \
 ../Generated_Code/TU1.c \
 ../Generated_Code/TimerIntLdd1.c \
@@ -53,7 +54,12 @@ C_SRCS += \
 ../Generated_Code/port.c \
 ../Generated_Code/queue.c \
 ../Generated_Code/tasks.c \
-../Generated_Code/timers.c 
+../Generated_Code/timers.c \
+../Generated_Code/trcBase.c \
+../Generated_Code/trcHardwarePort.c \
+../Generated_Code/trcKernel.c \
+../Generated_Code/trcKernelPort.c \
+../Generated_Code/trcUser.c 
 
 OBJS += \
 ./Generated_Code/AS1.o \
@@ -88,6 +94,7 @@ OBJS += \
 ./Generated_Code/LEDpin3.o \
 ./Generated_Code/PE_LDD.o \
 ./Generated_Code/PTA.o \
+./Generated_Code/RTOSTRC1.o \
 ./Generated_Code/TI1.o \
 ./Generated_Code/TU1.o \
 ./Generated_Code/TimerIntLdd1.o \
@@ -105,7 +112,12 @@ OBJS += \
 ./Generated_Code/port.o \
 ./Generated_Code/queue.o \
 ./Generated_Code/tasks.o \
-./Generated_Code/timers.o 
+./Generated_Code/timers.o \
+./Generated_Code/trcBase.o \
+./Generated_Code/trcHardwarePort.o \
+./Generated_Code/trcKernel.o \
+./Generated_Code/trcKernelPort.o \
+./Generated_Code/trcUser.o 
 
 C_DEPS += \
 ./Generated_Code/AS1.d \
@@ -140,6 +152,7 @@ C_DEPS += \
 ./Generated_Code/LEDpin3.d \
 ./Generated_Code/PE_LDD.d \
 ./Generated_Code/PTA.d \
+./Generated_Code/RTOSTRC1.d \
 ./Generated_Code/TI1.d \
 ./Generated_Code/TU1.d \
 ./Generated_Code/TimerIntLdd1.d \
@@ -157,7 +170,12 @@ C_DEPS += \
 ./Generated_Code/port.d \
 ./Generated_Code/queue.d \
 ./Generated_Code/tasks.d \
-./Generated_Code/timers.d 
+./Generated_Code/timers.d \
+./Generated_Code/trcBase.d \
+./Generated_Code/trcHardwarePort.d \
+./Generated_Code/trcKernel.d \
+./Generated_Code/trcKernelPort.d \
+./Generated_Code/trcUser.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

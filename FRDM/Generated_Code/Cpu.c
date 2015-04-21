@@ -7,7 +7,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-18, 19:45, # CodeGen: 13
+**     Date/Time   : 2015-04-21, 08:44, # CodeGen: 28
 **     Abstract    :
 **
 **     Settings    :
@@ -95,6 +95,9 @@
 #include "KeyD.h"
 #include "ExtIntLdd5.h"
 #include "FRTOS1.h"
+#include "RTOSTRC1.h"
+#include "Buzzer.h"
+#include "BitIoLdd4.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -293,8 +296,8 @@ void PE_low_level_init(void)
   /* SMC_PMPROT: ??=0,??=0,AVLP=0,??=0,ALLS=0,??=0,AVLLS=0,??=0 */
   SMC_PMPROT = 0x00U;                  /* Setup Power mode protection register */
   /* Common initialization of the CPU registers */
-  /* PORTA_ISFR: ISF=0x10 */
-  PORTA_ISFR = PORT_ISFR_ISF(0x10);
+  /* PORTA_ISFR: ISF=0x3030 */
+  PORTA_ISFR = PORT_ISFR_ISF(0x3030);
   /* Common initialization of the CPU registers */
   /* PORTA_PCR4: ISF=0,IRQC=0x0A */
   PORTA_PCR4 = (uint32_t)((PORTA_PCR4 & (uint32_t)~(uint32_t)(
@@ -303,6 +306,27 @@ void PE_low_level_init(void)
                )) | (uint32_t)(
                 PORT_PCR_IRQC(0x0A)
                ));
+  /* PORTA_PCR5: ISF=0,IRQC=0x0A */
+  PORTA_PCR5 = (uint32_t)((PORTA_PCR5 & (uint32_t)~(uint32_t)(
+                PORT_PCR_ISF_MASK |
+                PORT_PCR_IRQC(0x05)
+               )) | (uint32_t)(
+                PORT_PCR_IRQC(0x0A)
+               ));
+  /* PORTA_PCR12: ISF=0,IRQC=0x0A */
+  PORTA_PCR12 = (uint32_t)((PORTA_PCR12 & (uint32_t)~(uint32_t)(
+                 PORT_PCR_ISF_MASK |
+                 PORT_PCR_IRQC(0x05)
+                )) | (uint32_t)(
+                 PORT_PCR_IRQC(0x0A)
+                ));
+  /* PORTA_PCR13: ISF=0,IRQC=0x0A */
+  PORTA_PCR13 = (uint32_t)((PORTA_PCR13 & (uint32_t)~(uint32_t)(
+                 PORT_PCR_ISF_MASK |
+                 PORT_PCR_IRQC(0x05)
+                )) | (uint32_t)(
+                 PORT_PCR_IRQC(0x0A)
+                ));
   /* NVIC_ISER: SETENA|=0x40000000 */
   NVIC_ISER |= NVIC_ISER_SETENA(0x40000000);
   /* NVIC_IPR7: PRI_30=0 */
@@ -359,12 +383,15 @@ void PE_low_level_init(void)
   (void)ExtIntLdd4_Init(NULL);
   /* ### ExtInt_LDD "ExtIntLdd5" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)ExtIntLdd5_Init(NULL);
+  /* ### PercepioTrace "RTOSTRC1" init code ... */
   /* ### FreeRTOS "FRTOS1" init code ... */
 #if configSYSTICK_USE_LOW_POWER_TIMER
   /* enable clocking for low power timer, otherwise vPortStopTickTimer() will crash */
   SIM_PDD_SetClockGate(SIM_BASE_PTR, SIM_PDD_CLOCK_GATE_LPTMR0, PDD_ENABLE);
 #endif
   vPortStopTickTimer(); /* tick timer shall not run until the RTOS scheduler is started */
+  /* ### BitIO_LDD "BitIoLdd4" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd4_Init(NULL);
 }
   /* Flash configuration field */
   __attribute__ ((section (".cfmconfig"))) const uint8_t _cfm[0x10] = {

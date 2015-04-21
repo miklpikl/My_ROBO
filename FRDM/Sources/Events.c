@@ -75,11 +75,8 @@ void Cpu_OnNMIINT(void)
 */
 void TI1_OnInterrupt(void)
 {
-	#if PL_HAS_KBI
-		if(KeyD_Get())
-		{
-			KEY_OnInterrupt(KEY_BTN4);
-		}
+	#if PL_HAS_TIMER
+		TIMER_OnInterrupt();
 	#endif
 }
 
@@ -97,7 +94,12 @@ void TI1_OnInterrupt(void)
 */
 void KeyD_OnInterrupt(void)
 {
-  /* Write your code here ... */
+	#if PL_HAS_KBI
+		if(KeyD_Get())
+		{
+			KEY_OnInterrupt(KEY_BTN4);
+		}
+	#endif
 }
 
 /*
@@ -139,21 +141,21 @@ void KeyC_OnInterrupt(void)
 	#if PL_HAS_KBI
 	#if 1
 
-	if(PORT_PDD_GetPinInterruptFlag(PORTA_BASE_PTR, ExtIntLdd3_PIN_INDEX))
-	{
-		PORT_PDD_ClearPinInterruptFlag(PORTA_BASE_PTR, ExtIntLdd3_PIN_INDEX);
+		if(PORT_PDD_GetPinInterruptFlag(PORTA_BASE_PTR, ExtIntLdd3_PIN_INDEX))
+		{
+			PORT_PDD_ClearPinInterruptFlag(PORTA_BASE_PTR, ExtIntLdd3_PIN_INDEX);
 
-		KEY_OnInterrupt(KEY_BTN3);
-	}
+			KEY_OnInterrupt(KEY_BTN3);
+		}
 
 	#else
 
-	if(KeyC_Get())
-	{
-		KEY_OnInterrupt(KEY_BTN3);
-	}
+		if(KeyC_Get())
+		{
+			KEY_OnInterrupt(KEY_BTN3);
+		}
 
-	#endif
+		#endif
 	#endif
 }
 
@@ -289,6 +291,23 @@ void FRTOS1_vApplicationMallocFailedHook(void)
   taskDISABLE_INTERRUPTS();
   /* Write your code here ... */
   for(;;) {}
+}
+
+/*
+** ===================================================================
+**     Event       :  RTOSTRC1_OnTraceWrap (module Events)
+**
+**     Component   :  RTOSTRC1 [PercepioTrace]
+**     Description :
+**         Called for trace ring buffer wrap around. This gives the
+**         application a chance to dump the trace buffer.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void RTOSTRC1_OnTraceWrap(void)
+{
+  /* Write your code here ... */
 }
 
 /* END Events */

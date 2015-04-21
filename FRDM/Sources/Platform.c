@@ -14,6 +14,11 @@
 #include "RTOS.h"
 #include "Timer.h"
 #include "Event.h"
+#include "Key.h"
+#include "Trigger.h"
+#include "Debounce.h"
+#include "Mealy.h"
+#include "Buzzer.h"
 
 void PL_INIT(void)
 {
@@ -27,6 +32,26 @@ void PL_INIT(void)
 
 	#if PL_HAS_EVENTS
 		EVENT_Init();
+	#endif
+
+	#if PL_HAS_KEYS
+		KEY_Init();
+	#endif
+
+	#if PL_HAS_TRIGGER
+		TRG_Init();
+	#endif
+
+	#if PL_HAS_DEBOUNCE
+		DBNC_Init();
+	#endif
+
+	#if PL_HAS_MEALY
+		MEALY_Init();
+	#endif
+
+	#if PL_HAS_BUZZER
+			BUZ_Init();
 	#endif
 }
 
@@ -43,6 +68,27 @@ void PL_DEINIT(void)
 	#if PL_HAS_EVENTS
 		EVENT_DeInit();
 	#endif
+
+	#if PL_HAS_KEYS
+		KEY_DeInit();
+	#endif
+
+	#if PL_HAS_TRIGGER
+		TRG_DeInit();
+	#endif
+
+	#if PL_HAS_DEBOUNCE
+		DBNC_DeInit();
+	#endif
+
+	#if PL_HAS_MEALY
+		MEALY_DeInit();
+	#endif
+
+	#if PL_HAS_BUZZER
+		BUZ_DeInit();
+	#endif
 }
+
 
 

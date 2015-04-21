@@ -38,6 +38,15 @@ Sources/main.o: ../Sources/main.c \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/mpu_wrappers.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/task.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/list.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcKernelPort.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcHardwarePort.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcConfig.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcTypes.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcConfig.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcKernelHooks.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcBase.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcKernel.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcUser.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/CS1.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/HF1.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/TI1.h \
@@ -75,12 +84,14 @@ Sources/main.o: ../Sources/main.c \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd5.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd5.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/FRTOS1.h \
- C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/CLS1.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/RTOSTRC1.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/UTIL1.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/CLS1.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/semphr.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/queue.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/event_groups.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/timers.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/RTOSTRC1.h \
  ../Sources/Application.h ../Sources/Event.h ../Sources/Platform.h \
  ../Sources/RTOS.h ../Sources/Timer.h ../Sources/LED.h
 
@@ -162,6 +173,24 @@ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROB
 
 C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/list.h:
 
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcKernelPort.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcHardwarePort.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcConfig.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcTypes.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcConfig.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcKernelHooks.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcBase.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcKernel.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/trcUser.h:
+
 C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/CS1.h:
 
 C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/HF1.h:
@@ -236,9 +265,11 @@ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROB
 
 C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/FRTOS1.h:
 
-C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/CLS1.h:
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/RTOSTRC1.h:
 
 C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/UTIL1.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/CLS1.h:
 
 C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/semphr.h:
 
@@ -247,6 +278,8 @@ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROB
 C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/event_groups.h:
 
 C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/timers.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/RTOSTRC1.h:
 
 ../Sources/Application.h:
 

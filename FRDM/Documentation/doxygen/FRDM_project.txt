@@ -36,6 +36,7 @@
 - \subpage ExtIntLdd3
 - \subpage ExtIntLdd4
 - \subpage ExtIntLdd5
+- \subpage BitIoLdd4
 
 */
 

@@ -19,7 +19,24 @@ Sources/Platform.o: ../Sources/Platform.c ../Sources/Platform.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/LED3.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/LEDpin3.h \
  C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/BitIoLdd3.h \
- ../Sources/RTOS.h ../Sources/Timer.h ../Sources/Event.h
+ ../Sources/RTOS.h ../Sources/Timer.h ../Sources/Event.h ../Sources/Key.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyA.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd1.h \
+ C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/PORT_PDD.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyB.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd2.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyC.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd3.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyD.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd5.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyE.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/BitIoLdd8.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyF.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/BitIoLdd9.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyKEY.h \
+ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd4.h \
+ ../Sources/Trigger.h ../Sources/Debounce.h ../Sources/Mealy.h \
+ ../Sources/Buzzer.h
 
 ../Sources/Platform.h:
 
@@ -68,3 +85,43 @@ C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROB
 ../Sources/Timer.h:
 
 ../Sources/Event.h:
+
+../Sources/Key.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyA.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd1.h:
+
+C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/PORT_PDD.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyB.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd2.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyC.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd3.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyD.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd5.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyE.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/BitIoLdd8.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyF.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/BitIoLdd9.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/KeyKEY.h:
+
+C:/Users/MiklPikl/Desktop/School/6th\ Semester-\ Luzern/1\ -\ Infotronics/My_ROBO/FRDM/Generated_Code/ExtIntLdd4.h:
+
+../Sources/Trigger.h:
+
+../Sources/Debounce.h:
+
+../Sources/Mealy.h:
+
+../Sources/Buzzer.h:

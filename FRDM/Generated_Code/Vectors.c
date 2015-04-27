@@ -5,7 +5,7 @@
 **     Processor   : MKL25Z128VLK4
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-21, 08:44, # CodeGen: 28
+**     Date/Time   : 2015-04-27, 10:39, # CodeGen: 36
 **     Abstract    :
 **
 **     Settings    :
@@ -73,25 +73,31 @@
   #include "UTIL1.h"
   #include "AS1.h"
   #include "ASerialLdd1.h"
-  #include "KeyE.h"
-  #include "BitIoLdd8.h"
-  #include "KeyF.h"
-  #include "BitIoLdd9.h"
   #include "PTA.h"
   #include "KeyA.h"
   #include "ExtIntLdd1.h"
+  #include "FRTOS1.h"
+  #include "RTOSTRC1.h"
+  #include "BT1.h"
+  #include "Serial1.h"
+  #include "ASerialLdd2.h"
+  #include "USB1.h"
+  #include "USB0.h"
+  #include "CDC1.h"
+  #include "Tx1.h"
+  #include "Rx1.h"
   #include "KeyB.h"
   #include "ExtIntLdd2.h"
   #include "KeyC.h"
   #include "ExtIntLdd3.h"
-  #include "KeyKEY.h"
-  #include "ExtIntLdd4.h"
   #include "KeyD.h"
+  #include "ExtIntLdd4.h"
+  #include "KeyKEY.h"
   #include "ExtIntLdd5.h"
-  #include "FRTOS1.h"
-  #include "RTOSTRC1.h"
-  #include "Buzzer.h"
+  #include "KeyE.h"
   #include "BitIoLdd4.h"
+  #include "KeyF.h"
+  #include "BitIoLdd5.h"
   #include "Events.h"
 
 
@@ -140,7 +146,7 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x1A  0x00000068   -   ivINT_SPI0                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x1B  0x0000006C   -   ivINT_SPI1                    unused by PE */
     (tIsrFunc)&ASerialLdd1_Interrupt,  /* 0x1C  0x00000070   2   ivINT_UART0                   used by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x1D  0x00000074   -   ivINT_UART1                   unused by PE */
+    (tIsrFunc)&ASerialLdd2_Interrupt,  /* 0x1D  0x00000074   2   ivINT_UART1                   used by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x1E  0x00000078   -   ivINT_UART2                   unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x1F  0x0000007C   -   ivINT_ADC0                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x20  0x00000080   -   ivINT_CMP0                    unused by PE */
@@ -151,7 +157,7 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x25  0x00000094   -   ivINT_RTC_Seconds             unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x26  0x00000098   -   ivINT_PIT                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x27  0x0000009C   -   ivINT_Reserved39              unused by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x28  0x000000A0   -   ivINT_USB0                    unused by PE */
+    (tIsrFunc)&USB_ISR,                /* 0x28  0x000000A0   0   ivINT_USB0                    used by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x29  0x000000A4   -   ivINT_DAC0                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2A  0x000000A8   -   ivINT_TSI0                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2B  0x000000AC   -   ivINT_MCG                     unused by PE */

@@ -15,6 +15,7 @@
 #include "Event.h"
 #include "Application.h"
 #include "WAIT1.h"
+#include "Mealy.h"
 
 ///*Scheduler Task variables
 
@@ -46,6 +47,10 @@ static void AppTask(void* param)
 
 		#if PL_HAS_KEYS && PL_NUM_KEYS > 0
 			KEY_Scan();				///*Scans the Joystick shield for input
+		#endif
+
+		#if PL_HAS_MEALY
+			MEALY_Step();
 		#endif
 
 		LED1_TOGGLE;

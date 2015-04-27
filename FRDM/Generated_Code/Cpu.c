@@ -7,7 +7,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-21, 08:44, # CodeGen: 28
+**     Date/Time   : 2015-04-27, 10:39, # CodeGen: 36
 **     Abstract    :
 **
 **     Settings    :
@@ -79,25 +79,31 @@
 #include "UTIL1.h"
 #include "AS1.h"
 #include "ASerialLdd1.h"
-#include "KeyE.h"
-#include "BitIoLdd8.h"
-#include "KeyF.h"
-#include "BitIoLdd9.h"
 #include "PTA.h"
 #include "KeyA.h"
 #include "ExtIntLdd1.h"
+#include "FRTOS1.h"
+#include "RTOSTRC1.h"
+#include "BT1.h"
+#include "Serial1.h"
+#include "ASerialLdd2.h"
+#include "USB1.h"
+#include "USB0.h"
+#include "CDC1.h"
+#include "Tx1.h"
+#include "Rx1.h"
 #include "KeyB.h"
 #include "ExtIntLdd2.h"
 #include "KeyC.h"
 #include "ExtIntLdd3.h"
-#include "KeyKEY.h"
-#include "ExtIntLdd4.h"
 #include "KeyD.h"
+#include "ExtIntLdd4.h"
+#include "KeyKEY.h"
 #include "ExtIntLdd5.h"
-#include "FRTOS1.h"
-#include "RTOSTRC1.h"
-#include "Buzzer.h"
+#include "KeyE.h"
 #include "BitIoLdd4.h"
+#include "KeyF.h"
+#include "BitIoLdd5.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -296,18 +302,11 @@ void PE_low_level_init(void)
   /* SMC_PMPROT: ??=0,??=0,AVLP=0,??=0,ALLS=0,??=0,AVLLS=0,??=0 */
   SMC_PMPROT = 0x00U;                  /* Setup Power mode protection register */
   /* Common initialization of the CPU registers */
-  /* PORTA_ISFR: ISF=0x3030 */
-  PORTA_ISFR = PORT_ISFR_ISF(0x3030);
+  /* PORTA_ISFR: ISF=0x3010 */
+  PORTA_ISFR = PORT_ISFR_ISF(0x3010);
   /* Common initialization of the CPU registers */
   /* PORTA_PCR4: ISF=0,IRQC=0x0A */
   PORTA_PCR4 = (uint32_t)((PORTA_PCR4 & (uint32_t)~(uint32_t)(
-                PORT_PCR_ISF_MASK |
-                PORT_PCR_IRQC(0x05)
-               )) | (uint32_t)(
-                PORT_PCR_IRQC(0x0A)
-               ));
-  /* PORTA_PCR5: ISF=0,IRQC=0x0A */
-  PORTA_PCR5 = (uint32_t)((PORTA_PCR5 & (uint32_t)~(uint32_t)(
                 PORT_PCR_ISF_MASK |
                 PORT_PCR_IRQC(0x05)
                )) | (uint32_t)(
@@ -333,6 +332,8 @@ void PE_low_level_init(void)
   NVIC_IPR7 &= (uint32_t)~(uint32_t)(NVIC_IP_PRI_30(0xFF));
   /* GPIOD_PDDR: PDD&=~0x10 */
   GPIOD_PDDR &= (uint32_t)~(uint32_t)(GPIO_PDDR_PDD(0x10));
+  /* NVIC_IPR6: PRI_24=0 */
+  NVIC_IPR6 &= (uint32_t)~(uint32_t)(NVIC_IP_PRI_24(0xFF));
   /* GPIOA_PDDR: PDD&=~0x3030 */
   GPIOA_PDDR &= (uint32_t)~(uint32_t)(GPIO_PDDR_PDD(0x3030));
   /* PORTA_PCR20: ISF=0,MUX=7 */
@@ -365,16 +366,32 @@ void PE_low_level_init(void)
   AS1_Init();
   /* ### Shell "CLS1" init code ... */
   CLS1_Init(); /* initialize shell */
-  /* ### BitIO_LDD "BitIoLdd8" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
-  (void)BitIoLdd8_Init(NULL);
-  /* ### BitIO_LDD "BitIoLdd9" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
-  (void)BitIoLdd9_Init(NULL);
   /* ### Init_GPIO "PTA" init code ... */
   PTA_Init();
 
 
   /* ### ExtInt_LDD "ExtIntLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)ExtIntLdd1_Init(NULL);
+  /* ### PercepioTrace "RTOSTRC1" init code ... */
+  /* ### FreeRTOS "FRTOS1" init code ... */
+#if configSYSTICK_USE_LOW_POWER_TIMER
+  /* enable clocking for low power timer, otherwise vPortStopTickTimer() will crash */
+  SIM_PDD_SetClockGate(SIM_BASE_PTR, SIM_PDD_CLOCK_GATE_LPTMR0, PDD_ENABLE);
+#endif
+  vPortStopTickTimer(); /* tick timer shall not run until the RTOS scheduler is started */
+  /* ### Asynchro serial "Serial1" init code ... */
+  Serial1_Init();
+  /* ### Bluetooth_EGBT "BT1" init code ... */
+  BT1_Init();
+  /* ### Init_USB_OTG "USB0" init code ... */
+  USB0_Init();
+
+
+  /* ### RingBuffer "Tx1" init code ... */
+  Tx1_Init();
+  /* ### RingBuffer "Rx1" init code ... */
+  Rx1_Init();
+  (void)USB1_Init();
   /* ### ExtInt_LDD "ExtIntLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)ExtIntLdd2_Init(NULL);
   /* ### ExtInt_LDD "ExtIntLdd3" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
@@ -383,15 +400,10 @@ void PE_low_level_init(void)
   (void)ExtIntLdd4_Init(NULL);
   /* ### ExtInt_LDD "ExtIntLdd5" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)ExtIntLdd5_Init(NULL);
-  /* ### PercepioTrace "RTOSTRC1" init code ... */
-  /* ### FreeRTOS "FRTOS1" init code ... */
-#if configSYSTICK_USE_LOW_POWER_TIMER
-  /* enable clocking for low power timer, otherwise vPortStopTickTimer() will crash */
-  SIM_PDD_SetClockGate(SIM_BASE_PTR, SIM_PDD_CLOCK_GATE_LPTMR0, PDD_ENABLE);
-#endif
-  vPortStopTickTimer(); /* tick timer shall not run until the RTOS scheduler is started */
   /* ### BitIO_LDD "BitIoLdd4" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd4_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd5" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd5_Init(NULL);
 }
   /* Flash configuration field */
   __attribute__ ((section (".cfmconfig"))) const uint8_t _cfm[0x10] = {

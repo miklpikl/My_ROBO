@@ -32,9 +32,11 @@
 - \subpage TU1
 - \subpage TimerIntLdd1
 - \subpage ASerialLdd1
-- \subpage PTA
 - \subpage ExtIntLdd1
 - \subpage BitIoLdd4
+- \subpage PTA
+- \subpage ASerialLdd2
+- \subpage USB0
 
 */
 

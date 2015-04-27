@@ -5,6 +5,11 @@
 	<section name="completion_proposal_size">
 	</section>
 	<section name="PDOMSearchPage">
+		<item value="227191" key="searchFlags"/>
+		<item value="false" key="caseSensitive"/>
+		<list key="previousPatterns">
+			<item value="m_text"/>
+		</list>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
 		<item value="556" key="size.width"/>

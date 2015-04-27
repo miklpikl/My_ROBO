@@ -19,6 +19,7 @@
 #include "Debounce.h"
 #include "Mealy.h"
 #include "Buzzer.h"
+#include "Shell.h"
 
 void PL_INIT(void)
 {
@@ -52,6 +53,10 @@ void PL_INIT(void)
 
 	#if PL_HAS_BUZZER
 			BUZ_Init();
+	#endif
+
+	#if PL_HAS_SHELL
+		SHELL_Init();
 	#endif
 }
 
@@ -87,6 +92,10 @@ void PL_DEINIT(void)
 
 	#if PL_HAS_BUZZER
 		BUZ_DeInit();
+	#endif
+
+	#if PL_HAS_SHELL
+		SHELL_DeInit();
 	#endif
 }
 

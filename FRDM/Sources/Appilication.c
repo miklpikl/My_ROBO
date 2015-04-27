@@ -160,10 +160,12 @@ void APP_Task(void)
 	int counter = 0;
 
 	CLS1_SendStr("INFO: Application startup\r\n", CLS1_GetStdio()->stdOut);
-	EVENT_HandleEvent(APP_HandleEvents);
+	EVENT_Set(EVENT_Start);
 
 	while(1)
 	{
+		EVENT_HandleEvent(APP_HandleEvents);
+
 		#if PL_HAS_KEYS && PL_NUM_KEYS > 0
 			KEY_Scan(); 		///*Scans the 7 keys of the Joystick Shield
 		#endif
@@ -187,6 +189,28 @@ void APP_Task(void)
 
 void APP_Run(void)
 {
+	#if configUSE_TRACE_HOOKS
+			if(RTOSTRC1_uiTraceStart()==0)
+			{
+				while(1)
+				{
+					///*Error Code
+				}
+			}
+	#endif
+
+	#if USE_SW_TIMERS /* create software timer */
+		  timerHndl = xTimerCreate("timer0", TIMER_PERIOD_MS/portTICK_RATE_MS, pdTRUE, (void *)0, vTimerCallback);
+		  if (timerHndl==NULL) {
+			for(;;); /* failure! */
+		  }
+		  if (xTimerStart(timerHndl, 0)!=pdPASS) {
+			for(;;); /* failure! */
+		  }
+	#endif
+
+
+
 	PL_INIT();
 	RTOS_Run();
 

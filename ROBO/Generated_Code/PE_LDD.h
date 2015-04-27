@@ -5,7 +5,7 @@
 **     Processor   : MK22FX512VLQ12
 **     Version     : Component 01.014, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-21, 10:44, # CodeGen: 7
+**     Date/Time   : 2015-04-23, 11:22, # CodeGen: 13
 **     Abstract    :
 **
 **     Settings    :
@@ -76,13 +76,21 @@
 #include "UTIL1.h"
 #include "AS1.h"
 #include "ASerialLdd1.h"
-#include "PTA.h"
 #include "KeyA.h"
 #include "ExtIntLdd1.h"
 #include "FRTOS1.h"
 #include "RTOSTRC1.h"
 #include "BUZ1.h"
 #include "BitIoLdd4.h"
+#include "PTA.h"
+#include "BT1.h"
+#include "Serial1.h"
+#include "ASerialLdd2.h"
+#include "USB1.h"
+#include "USB0.h"
+#include "CDC1.h"
+#include "Tx1.h"
+#include "Rx1.h"
 
 
 /*

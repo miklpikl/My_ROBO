@@ -7,7 +7,7 @@
 **     Version     : Component 01.014, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : K22P144M100SF5RM, Rev.2, Apr 2013
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-21, 10:44, # CodeGen: 7
+**     Date/Time   : 2015-04-27, 11:25, # CodeGen: 19
 **     Abstract    :
 **
 **     Settings    :
@@ -76,13 +76,21 @@
 #include "UTIL1.h"
 #include "AS1.h"
 #include "ASerialLdd1.h"
-#include "PTA.h"
 #include "KeyA.h"
 #include "ExtIntLdd1.h"
 #include "FRTOS1.h"
 #include "RTOSTRC1.h"
 #include "BUZ1.h"
 #include "BitIoLdd4.h"
+#include "PTA.h"
+#include "BT1.h"
+#include "Serial1.h"
+#include "ASerialLdd2.h"
+#include "USB1.h"
+#include "USB0.h"
+#include "CDC1.h"
+#include "Tx1.h"
+#include "Rx1.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -185,9 +193,10 @@ void __init_hardware(void)
                 SIM_CLKDIV1_OUTDIV2(0x01) |
                 SIM_CLKDIV1_OUTDIV3(0x03) |
                 SIM_CLKDIV1_OUTDIV4(0x03); /* Set the system prescalers to safe value */
-  /* SIM_SCGC5: PORTE=1,PORTD=1,PORTA=1 */
+  /* SIM_SCGC5: PORTE=1,PORTD=1,PORTB=1,PORTA=1 */
   SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK |
                SIM_SCGC5_PORTD_MASK |
+               SIM_SCGC5_PORTB_MASK |
                SIM_SCGC5_PORTA_MASK;   /* Enable clock gate for ports to enable pin routing */
   /* SIM_SCGC5: LPTMR=1 */
   SIM_SCGC5 |= SIM_SCGC5_LPTMR_MASK;
@@ -195,13 +204,13 @@ void __init_hardware(void)
     /* PMC_REGSC: ACKISO=1 */
     PMC_REGSC |= PMC_REGSC_ACKISO_MASK; /* Release IO pads after wakeup from VLLS mode. */
   }
-  /* SIM_CLKDIV1: OUTDIV1=0,OUTDIV2=3,OUTDIV3=3,OUTDIV4=7,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0 */
+  /* SIM_CLKDIV1: OUTDIV1=0,OUTDIV2=1,OUTDIV3=4,OUTDIV4=4,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0 */
   SIM_CLKDIV1 = SIM_CLKDIV1_OUTDIV1(0x00) |
-                SIM_CLKDIV1_OUTDIV2(0x03) |
-                SIM_CLKDIV1_OUTDIV3(0x03) |
-                SIM_CLKDIV1_OUTDIV4(0x07); /* Update system prescalers */
-  /* SIM_SOPT2: PLLFLLSEL=0 */
-  SIM_SOPT2 &= (uint32_t)~(uint32_t)(SIM_SOPT2_PLLFLLSEL_MASK); /* Select FLL as a clock source for various peripherals */
+                SIM_CLKDIV1_OUTDIV2(0x01) |
+                SIM_CLKDIV1_OUTDIV3(0x04) |
+                SIM_CLKDIV1_OUTDIV4(0x04); /* Update system prescalers */
+  /* SIM_SOPT2: PLLFLLSEL=1 */
+  SIM_SOPT2 |= SIM_SOPT2_PLLFLLSEL_MASK; /* Select PLL as a clock source for various peripherals */
   /* SIM_SOPT1: OSC32KSEL=3 */
   SIM_SOPT1 |= SIM_SOPT1_OSC32KSEL(0x03); /* LPO 1kHz oscillator drives 32 kHz clock for various peripherals */
   /* PORTA_PCR18: ISF=0,MUX=0 */
@@ -221,8 +230,8 @@ void __init_hardware(void)
   MCG_C4 &= (uint8_t)~(uint8_t)((MCG_C4_DMX32_MASK | MCG_C4_DRST_DRS(0x03)));
   /* MCG_C5: ??=0,PLLCLKEN0=0,PLLSTEN0=0,PRDIV0=1 */
   MCG_C5 = MCG_C5_PRDIV0(0x01);
-  /* MCG_C6: LOLIE0=0,PLLS=0,CME0=0,VDIV0=1 */
-  MCG_C6 = MCG_C6_VDIV0(0x01);
+  /* MCG_C6: LOLIE0=0,PLLS=0,CME0=0,VDIV0=6 */
+  MCG_C6 = MCG_C6_VDIV0(0x06);
   while((MCG_S & MCG_S_OSCINIT0_MASK) == 0x00U) { /* Check that the oscillator is running */
   }
   while((MCG_S & MCG_S_IREFST_MASK) != 0x00U) { /* Check that the source of the FLL reference clock is the external reference clock. */
@@ -232,8 +241,8 @@ void __init_hardware(void)
   /* Switch to PBE Mode */
   /* MCG_C1: CLKS=2,FRDIV=4,IREFS=0,IRCLKEN=1,IREFSTEN=0 */
   MCG_C1 = (MCG_C1_CLKS(0x02) | MCG_C1_FRDIV(0x04) | MCG_C1_IRCLKEN_MASK);
-  /* MCG_C6: LOLIE0=0,PLLS=1,CME0=0,VDIV0=1 */
-  MCG_C6 = (MCG_C6_PLLS_MASK | MCG_C6_VDIV0(0x01));
+  /* MCG_C6: LOLIE0=0,PLLS=1,CME0=0,VDIV0=6 */
+  MCG_C6 = (MCG_C6_PLLS_MASK | MCG_C6_VDIV0(0x06));
   while((MCG_S & 0x0CU) != 0x08U) {    /* Wait until external reference clock is selected as MCG output */
   }
   while((MCG_S & MCG_S_LOCK0_MASK) == 0x00U) { /* Wait until locked */
@@ -332,12 +341,18 @@ void PE_low_level_init(void)
   /* Common initialization of the CPU registers */
   /* NVICIP59: PRI59=0 */
   NVICIP59 = NVIC_IP_PRI59(0x00);
+  /* NVICIP53: PRI53=0 */
+  NVICIP53 = NVIC_IP_PRI53(0x00);
   /* NVICIP20: PRI20=0 */
   NVICIP20 = NVIC_IP_PRI20(0x00);
-  /* NVICISER1: SETENA|=0x08000000 */
-  NVICISER1 |= NVIC_ISER_SETENA(0x08000000);
   /* GPIOA_PDDR: PDD&=~0x4000 */
   GPIOA_PDDR &= (uint32_t)~(uint32_t)(GPIO_PDDR_PDD(0x4000));
+  /* PORTE_PCR26: ISF=0,MUX=7 */
+  PORTE_PCR26 = (uint32_t)((PORTE_PCR26 & (uint32_t)~(uint32_t)(
+                 PORT_PCR_ISF_MASK
+                )) | (uint32_t)(
+                 PORT_PCR_MUX(0x07)
+  ));
   /* ### BitIO_LDD "BitIoLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd1_Init(NULL);
   /* ### LEDbit "LED1" init code ... */
@@ -356,10 +371,6 @@ void PE_low_level_init(void)
   AS1_Init();
   /* ### Shell "CLS1" init code ... */
   CLS1_Init(); /* initialize shell */
-  /* ### Init_GPIO "PTA" init code ... */
-  PTA_Init();
-
-
   /* ### ExtInt_LDD "ExtIntLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)ExtIntLdd1_Init(NULL);
   /* ### PercepioTrace "RTOSTRC1" init code ... */
@@ -371,6 +382,23 @@ void PE_low_level_init(void)
   vPortStopTickTimer(); /* tick timer shall not run until the RTOS scheduler is started */
   /* ### BitIO_LDD "BitIoLdd4" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd4_Init(NULL);
+  /* ### Init_GPIO "PTA" init code ... */
+  PTA_Init();
+
+
+  /* ### Asynchro serial "Serial1" init code ... */
+  Serial1_Init();
+  /* ### Bluetooth_EGBT "BT1" init code ... */
+  BT1_Init();
+  /* ### Init_USB_OTG "USB0" init code ... */
+  USB0_Init();
+
+
+  /* ### RingBuffer "Tx1" init code ... */
+  Tx1_Init();
+  /* ### RingBuffer "Rx1" init code ... */
+  Rx1_Init();
+  (void)USB1_Init();
 }
 
 /* END Cpu. */

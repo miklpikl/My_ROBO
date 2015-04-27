@@ -25,18 +25,22 @@ Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c \
  C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/LPTMR_PDD.h \
  ../Generated_Code/CLS1.h ../Generated_Code/UTIL1.h \
  ../Generated_Code/AS1.h ../Generated_Code/ASerialLdd1.h \
- ../Generated_Code/KeyE.h ../Generated_Code/BitIoLdd8.h \
- ../Generated_Code/KeyF.h ../Generated_Code/BitIoLdd9.h \
  ../Generated_Code/PTA.h ../Generated_Code/KeyA.h \
  ../Generated_Code/ExtIntLdd1.h \
  C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/PORT_PDD.h \
- ../Generated_Code/KeyB.h ../Generated_Code/ExtIntLdd2.h \
- ../Generated_Code/KeyC.h ../Generated_Code/ExtIntLdd3.h \
- ../Generated_Code/KeyKEY.h ../Generated_Code/ExtIntLdd4.h \
- ../Generated_Code/KeyD.h ../Generated_Code/ExtIntLdd5.h \
  ../Generated_Code/FRTOS1.h ../Generated_Code/RTOSTRC1.h \
  ../Generated_Code/semphr.h ../Generated_Code/queue.h \
- ../Generated_Code/event_groups.h ../Generated_Code/timers.h
+ ../Generated_Code/event_groups.h ../Generated_Code/timers.h \
+ ../Generated_Code/BT1.h ../Generated_Code/Serial1.h \
+ ../Generated_Code/ASerialLdd2.h ../Generated_Code/USB1.h \
+ ../Generated_Code/USB0.h ../Generated_Code/CDC1.h \
+ ../Generated_Code/Tx1.h ../Generated_Code/Rx1.h ../Generated_Code/KeyB.h \
+ ../Generated_Code/ExtIntLdd2.h ../Generated_Code/KeyC.h \
+ ../Generated_Code/ExtIntLdd3.h ../Generated_Code/KeyD.h \
+ ../Generated_Code/ExtIntLdd4.h ../Generated_Code/KeyKEY.h \
+ ../Generated_Code/ExtIntLdd5.h ../Generated_Code/KeyE.h \
+ ../Generated_Code/BitIoLdd4.h ../Generated_Code/KeyF.h \
+ ../Generated_Code/BitIoLdd5.h
 
 ../Generated_Code/FreeRTOS.h:
 
@@ -132,14 +136,6 @@ C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/LPTMR_PDD.h:
 
 ../Generated_Code/ASerialLdd1.h:
 
-../Generated_Code/KeyE.h:
-
-../Generated_Code/BitIoLdd8.h:
-
-../Generated_Code/KeyF.h:
-
-../Generated_Code/BitIoLdd9.h:
-
 ../Generated_Code/PTA.h:
 
 ../Generated_Code/KeyA.h:
@@ -147,22 +143,6 @@ C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/LPTMR_PDD.h:
 ../Generated_Code/ExtIntLdd1.h:
 
 C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/PORT_PDD.h:
-
-../Generated_Code/KeyB.h:
-
-../Generated_Code/ExtIntLdd2.h:
-
-../Generated_Code/KeyC.h:
-
-../Generated_Code/ExtIntLdd3.h:
-
-../Generated_Code/KeyKEY.h:
-
-../Generated_Code/ExtIntLdd4.h:
-
-../Generated_Code/KeyD.h:
-
-../Generated_Code/ExtIntLdd5.h:
 
 ../Generated_Code/FRTOS1.h:
 
@@ -175,3 +155,43 @@ C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/PORT_PDD.h:
 ../Generated_Code/event_groups.h:
 
 ../Generated_Code/timers.h:
+
+../Generated_Code/BT1.h:
+
+../Generated_Code/Serial1.h:
+
+../Generated_Code/ASerialLdd2.h:
+
+../Generated_Code/USB1.h:
+
+../Generated_Code/USB0.h:
+
+../Generated_Code/CDC1.h:
+
+../Generated_Code/Tx1.h:
+
+../Generated_Code/Rx1.h:
+
+../Generated_Code/KeyB.h:
+
+../Generated_Code/ExtIntLdd2.h:
+
+../Generated_Code/KeyC.h:
+
+../Generated_Code/ExtIntLdd3.h:
+
+../Generated_Code/KeyD.h:
+
+../Generated_Code/ExtIntLdd4.h:
+
+../Generated_Code/KeyKEY.h:
+
+../Generated_Code/ExtIntLdd5.h:
+
+../Generated_Code/KeyE.h:
+
+../Generated_Code/BitIoLdd4.h:
+
+../Generated_Code/KeyF.h:
+
+../Generated_Code/BitIoLdd5.h:

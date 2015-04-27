@@ -16,6 +16,7 @@ C_SRCS += \
 ../Sources/Mealy.c \
 ../Sources/Platform.c \
 ../Sources/RTOS.c \
+../Sources/Shell.c \
 ../Sources/Timer.c \
 ../Sources/Trigger.c \
 ../Sources/main.c 
@@ -33,6 +34,7 @@ OBJS += \
 ./Sources/Mealy.o \
 ./Sources/Platform.o \
 ./Sources/RTOS.o \
+./Sources/Shell.o \
 ./Sources/Timer.o \
 ./Sources/Trigger.o \
 ./Sources/main.o 
@@ -50,6 +52,7 @@ C_DEPS += \
 ./Sources/Mealy.d \
 ./Sources/Platform.d \
 ./Sources/RTOS.d \
+./Sources/Shell.d \
 ./Sources/Timer.d \
 ./Sources/Trigger.d \
 ./Sources/main.d 

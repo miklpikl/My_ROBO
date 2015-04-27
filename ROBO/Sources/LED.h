@@ -27,9 +27,14 @@
 	#define LED3_DEINIT		///*Do Nothing
 
 #elif PL_TARGET_BOARD == KL25ZFRDM
-	#include "LED1.h"
-	#include "LED2.h"
-	#include "LED3.h"
+	#if PL_NUM_LEDS == 2
+		#include "LED1.h"
+		#include "LED2.h"
+	#elif PL_NUM_LEDS == 3
+		#include "LED1.h"
+		#include "LED2.h"
+		#include "LED3.h"
+	#endif
 #else
 	#error "Unsupported Platform!"
 #endif

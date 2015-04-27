@@ -1,0 +1,233 @@
+/*
+ * Appilication.c
+ *
+ *  Created on: Apr 13, 2015
+ *      Author: MiklPikl
+ */
+
+#include "Platform.h"
+#include "Application.h"
+#include "LED.h"
+#include "Key.h"
+#include "CLS1.h"
+#include "Mealy.h"
+#include "WAIT1.h"
+#include "Event.h"
+#include "RTOS.h"
+#include "KeyDebounce.h"
+#include "FRTOS1.h"
+#include "timers.h"
+#include "Buzzer.h"
+
+#if configUSE_TRACE_HOOKS
+	#include "RTOSTRC1.h"
+#endif
+
+///*Software Timer Implementation
+#define USE_SW_TIMERS 1
+///*Only for use with ROBO Board
+
+///*Implements a Software Timer
+#if USE_SW_TIMERS
+	static xTimerHandle timerHndl;
+	#define TIMER_PERIODMS 50
+
+	static void vTimerCallback(xTimerHandle pxTimer)
+	{
+		LED2_TOGGLE;
+	}
+#endif
+
+void APP_HandleEvents(EVENT_Handle event)
+{
+	switch(event)
+	{
+		case EVENT_Start:
+			LED1_ON;
+			WAIT1_Waitms(100);
+			LED1_OFF;
+
+		#if PL_HAS_BUZZER
+			BUZ_Beep(1000, 500);
+		#endif
+		break;
+
+		case EVENT_LED_Flash:
+			LED1_TOGGLE;
+			break;
+
+		#if PL_NUM_KEYS >= 1
+		case EVENT_KeyA_Press:
+			CLS1_SendStr("Key A press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyA_Held:
+			CLS1_SendStr("Key A long press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyA_Release:
+			CLS1_SendStr("Key A release\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 2
+		case EVENT_KeyB_Press:
+			CLS1_SendStr("Key B press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyB_Held:
+			CLS1_SendStr("Key B long press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyB_Release:
+			CLS1_SendStr("Key B release\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 3
+		case EVENT_KeyC_Press:
+			CLS1_SendStr("Key C press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyC_Held:
+			CLS1_SendStr("Key C long press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyC_Release:
+			CLS1_SendStr("Key C release\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 4
+		case EVENT_KeyD_Press:
+			CLS1_SendStr("Key D press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyD_Held:
+			CLS1_SendStr("Key D long press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyD_Release:
+			CLS1_SendStr("Key D release\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 5
+		case EVENT_KeyE_Press:
+			CLS1_SendStr("Key E press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyE_Held:
+			CLS1_SendStr("Key E long press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyE_Release:
+			CLS1_SendStr("Key E release\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 6
+		case EVENT_KeyF_Press:
+			CLS1_SendStr("Key F press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyF_Held:
+			CLS1_SendStr("Key F long press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyF_Release:
+			CLS1_SendStr("Key F release\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		#endif
+
+		#if PL_NUM_KEYS >= 7
+		case EVENT_KeyKEY_Press:
+			CLS1_SendStr("Key KEY press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyKEY_Held:
+			CLS1_SendStr("Key KEY long press\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		case EVENT_KeyKEY_Release:
+			CLS1_SendStr("Key KEY release\r\n", CLS1_GetStdio()->stdOut);
+			break;
+		#endif
+
+		default:
+		break;	///*ends the switch
+	}
+
+}
+
+/*
+
+ * Function Name: APP_Task
+ * Function Type: void
+ * Date: 13.04.2015
+ *
+ * Description: This is the main task for Application.c
+ */
+
+void APP_Task(void)
+{
+	int counter = 0;
+
+	CLS1_SendStr("INFO: Application startup\r\n", CLS1_GetStdio()->stdOut);
+	EVENT_HandleEvent(APP_HandleEvents);
+
+	while(1)
+	{
+		#if PL_HAS_KEYS && PL_NUM_KEYS > 0
+			KEY_Scan(); 		///*Scans the 7 keys of the Joystick Shield
+		#endif
+
+		#if PL_HAS_MEALY
+			MEALY_Step();
+		#endif
+
+		#if 0
+			counter++;
+			if (counter > 40)
+			{
+				counter = 0;	///*Resets counter
+				CLS1_SendStr("Hello!\r\n", CLS1_GetStdio()->stdOut);
+			}
+		#endif
+
+		WAIT1_Waitms(50);		///*Waits for some amount of time
+	}
+}
+
+void APP_Run(void)
+{
+	PL_INIT();
+	RTOS_Run();
+
+	#if 0
+		LED1_ON;
+		LED2_ON;
+		LED3_ON;
+
+		LED1_OFF;
+		LED2_OFF;
+		LED3_OFF;
+
+		LED_TEST;
+	#endif
+
+	#if 0
+		j = *p;
+		f();
+		*p = 5;
+	#endif
+
+	#if 0
+		while(1)
+		{
+			WAIT1_Waitms(200);
+			LED1_OFF;
+			WAIT1_Waitms(200);
+			LED2_OFF;
+			WAIT1_Waitms(200);
+			LED3_OFF;
+			WAIT1_Waitms(200);
+
+			WAIT1_Waitms(200);
+			LED1_ON;
+			WAIT1_Waitms(200);
+			LED2_ON;
+			WAIT1_Waitms(200);
+			LED3_ON;
+			WAIT1_Waitms(200);
+
+		}
+	#endif
+}
+

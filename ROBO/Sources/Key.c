@@ -140,14 +140,16 @@ void KEY_DisableInterrupts(void)
 	#endif
 }
 
+
+
+#endif
+
 void PORTA_OnInterrupt(void)
 {
 	void Cpu_ivINT_PORTA(void);
 
 	Cpu_ivINT_PORTA();
 }
-
-#endif
 
 void KEY_Init(void)
 {

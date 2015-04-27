@@ -6,11 +6,14 @@
 C_SRCS += \
 ../Generated_Code/AS1.c \
 ../Generated_Code/ASerialLdd1.c \
+../Generated_Code/ASerialLdd2.c \
+../Generated_Code/BT1.c \
 ../Generated_Code/BitIoLdd1.c \
 ../Generated_Code/BitIoLdd2.c \
 ../Generated_Code/BitIoLdd3.c \
-../Generated_Code/BitIoLdd8.c \
-../Generated_Code/BitIoLdd9.c \
+../Generated_Code/BitIoLdd4.c \
+../Generated_Code/BitIoLdd5.c \
+../Generated_Code/CDC1.c \
 ../Generated_Code/CLS1.c \
 ../Generated_Code/CS1.c \
 ../Generated_Code/Cpu.c \
@@ -37,9 +40,14 @@ C_SRCS += \
 ../Generated_Code/PE_LDD.c \
 ../Generated_Code/PTA.c \
 ../Generated_Code/RTOSTRC1.c \
+../Generated_Code/Rx1.c \
+../Generated_Code/Serial1.c \
 ../Generated_Code/TI1.c \
 ../Generated_Code/TU1.c \
 ../Generated_Code/TimerIntLdd1.c \
+../Generated_Code/Tx1.c \
+../Generated_Code/USB0.c \
+../Generated_Code/USB1.c \
 ../Generated_Code/UTIL1.c \
 ../Generated_Code/Vectors.c \
 ../Generated_Code/WAIT1.c \
@@ -59,16 +67,27 @@ C_SRCS += \
 ../Generated_Code/trcHardwarePort.c \
 ../Generated_Code/trcKernel.c \
 ../Generated_Code/trcKernelPort.c \
-../Generated_Code/trcUser.c 
+../Generated_Code/trcUser.c \
+../Generated_Code/usb_cdc.c \
+../Generated_Code/usb_cdc_pstn.c \
+../Generated_Code/usb_class.c \
+../Generated_Code/usb_dci_kinetis.c \
+../Generated_Code/usb_descriptor.c \
+../Generated_Code/usb_driver.c \
+../Generated_Code/usb_framework.c \
+../Generated_Code/wdt_kinetis.c 
 
 OBJS += \
 ./Generated_Code/AS1.o \
 ./Generated_Code/ASerialLdd1.o \
+./Generated_Code/ASerialLdd2.o \
+./Generated_Code/BT1.o \
 ./Generated_Code/BitIoLdd1.o \
 ./Generated_Code/BitIoLdd2.o \
 ./Generated_Code/BitIoLdd3.o \
-./Generated_Code/BitIoLdd8.o \
-./Generated_Code/BitIoLdd9.o \
+./Generated_Code/BitIoLdd4.o \
+./Generated_Code/BitIoLdd5.o \
+./Generated_Code/CDC1.o \
 ./Generated_Code/CLS1.o \
 ./Generated_Code/CS1.o \
 ./Generated_Code/Cpu.o \
@@ -95,9 +114,14 @@ OBJS += \
 ./Generated_Code/PE_LDD.o \
 ./Generated_Code/PTA.o \
 ./Generated_Code/RTOSTRC1.o \
+./Generated_Code/Rx1.o \
+./Generated_Code/Serial1.o \
 ./Generated_Code/TI1.o \
 ./Generated_Code/TU1.o \
 ./Generated_Code/TimerIntLdd1.o \
+./Generated_Code/Tx1.o \
+./Generated_Code/USB0.o \
+./Generated_Code/USB1.o \
 ./Generated_Code/UTIL1.o \
 ./Generated_Code/Vectors.o \
 ./Generated_Code/WAIT1.o \
@@ -117,16 +141,27 @@ OBJS += \
 ./Generated_Code/trcHardwarePort.o \
 ./Generated_Code/trcKernel.o \
 ./Generated_Code/trcKernelPort.o \
-./Generated_Code/trcUser.o 
+./Generated_Code/trcUser.o \
+./Generated_Code/usb_cdc.o \
+./Generated_Code/usb_cdc_pstn.o \
+./Generated_Code/usb_class.o \
+./Generated_Code/usb_dci_kinetis.o \
+./Generated_Code/usb_descriptor.o \
+./Generated_Code/usb_driver.o \
+./Generated_Code/usb_framework.o \
+./Generated_Code/wdt_kinetis.o 
 
 C_DEPS += \
 ./Generated_Code/AS1.d \
 ./Generated_Code/ASerialLdd1.d \
+./Generated_Code/ASerialLdd2.d \
+./Generated_Code/BT1.d \
 ./Generated_Code/BitIoLdd1.d \
 ./Generated_Code/BitIoLdd2.d \
 ./Generated_Code/BitIoLdd3.d \
-./Generated_Code/BitIoLdd8.d \
-./Generated_Code/BitIoLdd9.d \
+./Generated_Code/BitIoLdd4.d \
+./Generated_Code/BitIoLdd5.d \
+./Generated_Code/CDC1.d \
 ./Generated_Code/CLS1.d \
 ./Generated_Code/CS1.d \
 ./Generated_Code/Cpu.d \
@@ -153,9 +188,14 @@ C_DEPS += \
 ./Generated_Code/PE_LDD.d \
 ./Generated_Code/PTA.d \
 ./Generated_Code/RTOSTRC1.d \
+./Generated_Code/Rx1.d \
+./Generated_Code/Serial1.d \
 ./Generated_Code/TI1.d \
 ./Generated_Code/TU1.d \
 ./Generated_Code/TimerIntLdd1.d \
+./Generated_Code/Tx1.d \
+./Generated_Code/USB0.d \
+./Generated_Code/USB1.d \
 ./Generated_Code/UTIL1.d \
 ./Generated_Code/Vectors.d \
 ./Generated_Code/WAIT1.d \
@@ -175,7 +215,15 @@ C_DEPS += \
 ./Generated_Code/trcHardwarePort.d \
 ./Generated_Code/trcKernel.d \
 ./Generated_Code/trcKernelPort.d \
-./Generated_Code/trcUser.d 
+./Generated_Code/trcUser.d \
+./Generated_Code/usb_cdc.d \
+./Generated_Code/usb_cdc_pstn.d \
+./Generated_Code/usb_class.d \
+./Generated_Code/usb_dci_kinetis.d \
+./Generated_Code/usb_descriptor.d \
+./Generated_Code/usb_driver.d \
+./Generated_Code/usb_framework.d \
+./Generated_Code/wdt_kinetis.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

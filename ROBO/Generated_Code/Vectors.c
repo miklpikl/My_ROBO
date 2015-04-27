@@ -5,7 +5,7 @@
 **     Processor   : MK22FX512VLQ12
 **     Version     : Component 01.014, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-21, 10:44, # CodeGen: 7
+**     Date/Time   : 2015-04-23, 11:22, # CodeGen: 13
 **     Abstract    :
 **
 **     Settings    :
@@ -70,13 +70,21 @@
   #include "UTIL1.h"
   #include "AS1.h"
   #include "ASerialLdd1.h"
-  #include "PTA.h"
   #include "KeyA.h"
   #include "ExtIntLdd1.h"
   #include "FRTOS1.h"
   #include "RTOSTRC1.h"
   #include "BUZ1.h"
   #include "BitIoLdd4.h"
+  #include "PTA.h"
+  #include "BT1.h"
+  #include "Serial1.h"
+  #include "ASerialLdd2.h"
+  #include "USB1.h"
+  #include "USB0.h"
+  #include "CDC1.h"
+  #include "Tx1.h"
+  #include "Rx1.h"
   #include "Events.h"
 
 
@@ -143,8 +151,8 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2C  0x000000B0   -   ivINT_I2S0_Tx                  unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2D  0x000000B4   -   ivINT_I2S0_Rx                  unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2E  0x000000B8   -   ivINT_Reserved46               unused by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x2F  0x000000BC   -   ivINT_UART0_RX_TX              unused by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x30  0x000000C0   -   ivINT_UART0_ERR                unused by PE */
+    (tIsrFunc)&ASerialLdd2_Interrupt,  /* 0x2F  0x000000BC   8   ivINT_UART0_RX_TX              used by PE */
+    (tIsrFunc)&ASerialLdd2_Interrupt,  /* 0x30  0x000000C0   8   ivINT_UART0_ERR                used by PE */
     (tIsrFunc)&ASerialLdd1_Interrupt,  /* 0x31  0x000000C4   8   ivINT_UART1_RX_TX              used by PE */
     (tIsrFunc)&ASerialLdd1_Interrupt,  /* 0x32  0x000000C8   8   ivINT_UART1_ERR                used by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x33  0x000000CC   -   ivINT_UART2_RX_TX              unused by PE */
@@ -165,13 +173,13 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x42  0x00000108   -   ivINT_PIT2                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x43  0x0000010C   -   ivINT_PIT3                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x44  0x00000110   -   ivINT_PDB0                     unused by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x45  0x00000114   -   ivINT_USB0                     unused by PE */
+    (tIsrFunc)&USB_ISR,                /* 0x45  0x00000114   0   ivINT_USB0                     used by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x46  0x00000118   -   ivINT_USBDCD                   unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x47  0x0000011C   -   ivINT_Reserved71               unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x48  0x00000120   -   ivINT_DAC0                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x49  0x00000124   -   ivINT_MCG                      unused by PE */
     (tIsrFunc)&TU1_Interrupt,          /* 0x4A  0x00000128   8   ivINT_LPTimer                  used by PE */
-    (tIsrFunc)&PORTA_OnInterrupt,      /* 0x4B  0x0000012C   0   ivINT_PORTA                    used by PE */
+    (tIsrFunc)&Cpu_ivINT_PORTA,        /* 0x4B  0x0000012C   10   ivINT_PORTA                    used by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x4C  0x00000130   -   ivINT_PORTB                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x4D  0x00000134   -   ivINT_PORTC                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x4E  0x00000138   -   ivINT_PORTD                    unused by PE */

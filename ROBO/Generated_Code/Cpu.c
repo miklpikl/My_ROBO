@@ -7,7 +7,7 @@
 **     Version     : Component 01.014, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : K22P144M100SF5RM, Rev.2, Apr 2013
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-27, 11:25, # CodeGen: 19
+**     Date/Time   : 2015-04-28, 09:23, # CodeGen: 24
 **     Abstract    :
 **
 **     Settings    :
@@ -78,8 +78,6 @@
 #include "ASerialLdd1.h"
 #include "KeyA.h"
 #include "ExtIntLdd1.h"
-#include "FRTOS1.h"
-#include "RTOSTRC1.h"
 #include "BUZ1.h"
 #include "BitIoLdd4.h"
 #include "PTA.h"
@@ -91,6 +89,7 @@
 #include "CDC1.h"
 #include "Tx1.h"
 #include "Rx1.h"
+#include "FRTOS1.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -373,13 +372,6 @@ void PE_low_level_init(void)
   CLS1_Init(); /* initialize shell */
   /* ### ExtInt_LDD "ExtIntLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)ExtIntLdd1_Init(NULL);
-  /* ### PercepioTrace "RTOSTRC1" init code ... */
-  /* ### FreeRTOS "FRTOS1" init code ... */
-#if configSYSTICK_USE_LOW_POWER_TIMER
-  /* enable clocking for low power timer, otherwise vPortStopTickTimer() will crash */
-  SIM_PDD_SetClockGate(SIM_BASE_PTR, SIM_PDD_CLOCK_GATE_LPTMR0, PDD_ENABLE);
-#endif
-  vPortStopTickTimer(); /* tick timer shall not run until the RTOS scheduler is started */
   /* ### BitIO_LDD "BitIoLdd4" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd4_Init(NULL);
   /* ### Init_GPIO "PTA" init code ... */
@@ -399,6 +391,12 @@ void PE_low_level_init(void)
   /* ### RingBuffer "Rx1" init code ... */
   Rx1_Init();
   (void)USB1_Init();
+  /* ### FreeRTOS "FRTOS1" init code ... */
+#if configSYSTICK_USE_LOW_POWER_TIMER
+  /* enable clocking for low power timer, otherwise vPortStopTickTimer() will crash */
+  SIM_PDD_SetClockGate(SIM_BASE_PTR, SIM_PDD_CLOCK_GATE_LPTMR0, PDD_ENABLE);
+#endif
+  vPortStopTickTimer(); /* tick timer shall not run until the RTOS scheduler is started */
 }
 
 /* END Cpu. */

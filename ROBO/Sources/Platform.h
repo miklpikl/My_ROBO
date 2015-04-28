@@ -65,6 +65,15 @@
 	#define PL_HAS_BUZZER (1)
 	///*The ROBO Board has a buzzer on board
 
+	#define PL_HAS_SHELL (1)
+	///*The ROBO Board has Shell Capability
+
+	#define PL_HAS_BLUETOOTH (1)
+	///*The ROBO Board has Bluetooth Capability
+
+	#define PL_HAS_USB_CDC (1)
+	///*The ROBO Board has USB CDC capability
+
 #elif PL_TARGET_BOARD == KL25ZFRDM
 
 	#define PL_HAS_LED	(1)
@@ -123,6 +132,15 @@
 	///*The FRDM Board does not have an on board buzzer,
 	///*if a buzzer is connected.
 
+	#define PL_HAS_SHELL (1)
+	///*The FRDM Board has Shell Capability
+
+	#define PL_HAS_BLUETOOTH (0)
+	///*The FRDM Board doesn't have Bluetooth Capability
+
+	#define PL_HAS_USB_CDC (1)
+	///*The FRDM Board has USB CDC Capabilities
+
 #else
 	#define PL_HAS_LED	(0)
 	///*If 1, an initialization program is run. If 0, no LEDs are on the board
@@ -169,6 +187,15 @@
 
 	#define PL_HAS_BUZZER (0)
 	///*Deactivates Buzzer capability
+
+	#define PL_HAS_SHELL (0)
+	///*Deactivates Shell Capability
+
+	#define PL_HAS_BLUETOOTH (0)
+	///*Deactivates Bluetooth Capability
+
+	#define PL_HAS_USB_CDC
+	///*Deactivates USB CDC communication
 #endif
 
 

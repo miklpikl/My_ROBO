@@ -39,7 +39,6 @@ C_SRCS += \
 ../Generated_Code/LEDpin3.c \
 ../Generated_Code/PE_LDD.c \
 ../Generated_Code/PTA.c \
-../Generated_Code/RTOSTRC1.c \
 ../Generated_Code/Rx1.c \
 ../Generated_Code/Serial1.c \
 ../Generated_Code/TI1.c \
@@ -63,11 +62,6 @@ C_SRCS += \
 ../Generated_Code/queue.c \
 ../Generated_Code/tasks.c \
 ../Generated_Code/timers.c \
-../Generated_Code/trcBase.c \
-../Generated_Code/trcHardwarePort.c \
-../Generated_Code/trcKernel.c \
-../Generated_Code/trcKernelPort.c \
-../Generated_Code/trcUser.c \
 ../Generated_Code/usb_cdc.c \
 ../Generated_Code/usb_cdc_pstn.c \
 ../Generated_Code/usb_class.c \
@@ -113,7 +107,6 @@ OBJS += \
 ./Generated_Code/LEDpin3.o \
 ./Generated_Code/PE_LDD.o \
 ./Generated_Code/PTA.o \
-./Generated_Code/RTOSTRC1.o \
 ./Generated_Code/Rx1.o \
 ./Generated_Code/Serial1.o \
 ./Generated_Code/TI1.o \
@@ -137,11 +130,6 @@ OBJS += \
 ./Generated_Code/queue.o \
 ./Generated_Code/tasks.o \
 ./Generated_Code/timers.o \
-./Generated_Code/trcBase.o \
-./Generated_Code/trcHardwarePort.o \
-./Generated_Code/trcKernel.o \
-./Generated_Code/trcKernelPort.o \
-./Generated_Code/trcUser.o \
 ./Generated_Code/usb_cdc.o \
 ./Generated_Code/usb_cdc_pstn.o \
 ./Generated_Code/usb_class.o \
@@ -187,7 +175,6 @@ C_DEPS += \
 ./Generated_Code/LEDpin3.d \
 ./Generated_Code/PE_LDD.d \
 ./Generated_Code/PTA.d \
-./Generated_Code/RTOSTRC1.d \
 ./Generated_Code/Rx1.d \
 ./Generated_Code/Serial1.d \
 ./Generated_Code/TI1.d \
@@ -211,11 +198,6 @@ C_DEPS += \
 ./Generated_Code/queue.d \
 ./Generated_Code/tasks.d \
 ./Generated_Code/timers.d \
-./Generated_Code/trcBase.d \
-./Generated_Code/trcHardwarePort.d \
-./Generated_Code/trcKernel.d \
-./Generated_Code/trcKernelPort.d \
-./Generated_Code/trcUser.d \
 ./Generated_Code/usb_cdc.d \
 ./Generated_Code/usb_cdc_pstn.d \
 ./Generated_Code/usb_class.d \

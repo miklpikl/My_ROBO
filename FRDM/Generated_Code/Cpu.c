@@ -7,7 +7,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-27, 10:39, # CodeGen: 36
+**     Date/Time   : 2015-04-28, 10:01, # CodeGen: 42
 **     Abstract    :
 **
 **     Settings    :
@@ -77,13 +77,10 @@
 #include "TU1.h"
 #include "CLS1.h"
 #include "UTIL1.h"
-#include "AS1.h"
-#include "ASerialLdd1.h"
 #include "PTA.h"
 #include "KeyA.h"
 #include "ExtIntLdd1.h"
 #include "FRTOS1.h"
-#include "RTOSTRC1.h"
 #include "BT1.h"
 #include "Serial1.h"
 #include "ASerialLdd2.h"
@@ -104,6 +101,8 @@
 #include "BitIoLdd4.h"
 #include "KeyF.h"
 #include "BitIoLdd5.h"
+#include "AS1.h"
+#include "ASerialLdd1.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -372,7 +371,6 @@ void PE_low_level_init(void)
 
   /* ### ExtInt_LDD "ExtIntLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)ExtIntLdd1_Init(NULL);
-  /* ### PercepioTrace "RTOSTRC1" init code ... */
   /* ### FreeRTOS "FRTOS1" init code ... */
 #if configSYSTICK_USE_LOW_POWER_TIMER
   /* enable clocking for low power timer, otherwise vPortStopTickTimer() will crash */

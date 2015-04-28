@@ -40,7 +40,7 @@ static const CLS1_ParseCommandCallback CmdParserTable[] =
 #endif
 #if PL_HAS_BLUETOOTH
   #if BT1_PARSE_COMMAND_ENABLED
-  BT1_ParseCommand,
+  	  BT1_ParseCommand,
   #endif
 #endif
 #if PL_HAS_LINE_SENSOR
@@ -224,7 +224,7 @@ void SHELL_Init(void) {
 #endif
 }
 
-void SHELL_Deinit(void) {
+void SHELL_DeInit(void) {
 }
 
 #endif /* PL_HAS_SHELL */

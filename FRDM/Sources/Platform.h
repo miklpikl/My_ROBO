@@ -125,7 +125,7 @@
 	#define PL_HAS_TRIGGER (1)
 	///*The FRDM Board has a Trigger
 
-	#define PL_HAS_MEALY (1)
+	#define PL_HAS_MEALY (0)
 	///*The FRDM Board has Mealy capability
 
 	#define PL_HAS_BUZZER (0)

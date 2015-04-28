@@ -62,7 +62,6 @@
 #include "KeyA.h"
 #include "ExtIntLdd1.h"
 #include "FRTOS1.h"
-#include "RTOSTRC1.h"
 #include "BUZ1.h"
 #include "BitIoLdd4.h"
 #include "Buzzer.h"

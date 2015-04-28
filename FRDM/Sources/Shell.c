@@ -88,7 +88,7 @@ static uint8_t SHELL_PrintStatus(const CLS1_StdIOType *io) {
   CLS1_SendStatusStr("Shell", "\r\n", io->stdOut);
   UTIL1_Num32sToStr(buf, sizeof(buf), SHELL_val);
   UTIL1_strcat(buf, sizeof(buf), "\r\n");
-  CLS1_SendStatusStr("  val", buf, io->stdOut);
+  CLS1_SendStatusStr("val", buf, io->stdOut);
   return ERR_OK;
 }
 

@@ -53,7 +53,6 @@
 #include "KeyA.h"
 #include "ExtIntLdd1.h"
 #include "FRTOS1.h"
-#include "RTOSTRC1.h"
 #include "BT1.h"
 #include "Serial1.h"
 #include "ASerialLdd2.h"

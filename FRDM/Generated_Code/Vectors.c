@@ -5,7 +5,7 @@
 **     Processor   : MKL25Z128VLK4
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-04-27, 10:39, # CodeGen: 36
+**     Date/Time   : 2015-04-28, 10:01, # CodeGen: 42
 **     Abstract    :
 **
 **     Settings    :
@@ -71,13 +71,10 @@
   #include "TU1.h"
   #include "CLS1.h"
   #include "UTIL1.h"
-  #include "AS1.h"
-  #include "ASerialLdd1.h"
   #include "PTA.h"
   #include "KeyA.h"
   #include "ExtIntLdd1.h"
   #include "FRTOS1.h"
-  #include "RTOSTRC1.h"
   #include "BT1.h"
   #include "Serial1.h"
   #include "ASerialLdd2.h"
@@ -98,6 +95,8 @@
   #include "BitIoLdd4.h"
   #include "KeyF.h"
   #include "BitIoLdd5.h"
+  #include "AS1.h"
+  #include "ASerialLdd1.h"
   #include "Events.h"
 
 

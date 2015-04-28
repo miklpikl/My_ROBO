@@ -31,6 +31,6 @@ void SHELL_SendString(unsigned char *msg);
 void SHELL_Init(void);
 
 /*! \brief Shell driver de-initialization */
-void SHELL_Deinit(void);
+void SHELL_DeInit(void);
 
 #endif /* SHELL_H_ */

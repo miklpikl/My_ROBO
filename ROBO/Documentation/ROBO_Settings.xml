@@ -1637,290 +1637,6 @@ rising or falling edge
       </event>
     </Events>
   </Bean>
-  <Bean name="FRTOS1" type="FreeRTOS">
-    <Enabled v="Y" />
-    <Properties>
-      <Component_name v="FRTOS1" />
-      <RTOS_Version v="V8.2.0" />
-      <group name="Custom Port">
-        <Compiler v="automatic" />
-        <boolgroup name="Static Sources" v="Disabled" />
-        <boolgroup name="Custom portBASE_TYPE" v="Disabled" />
-      </group>
-      <boolgroup name="Kinetis SDK" v="Disabled" />
-      <Classic_CodeWarrior v="no" />
-      <Disabled_Interrupts_in_Startup v="yes" />
-      <configASSERT_defined v="yes" />
-      <Application_Task_Tags v="no" />
-      <Use_Trace_Facility v="yes" />
-      <boolgroup name="Trace Hooks" v="Enabled">
-        <inhrbean type="PercepioTrace">
-          <Enabled v="Y" />
-          <Properties>
-            <Component_name v="RTOSTRC1" />
-            <RTOS_Trace_Version v="V2.7.0" />
-            <Utility v="UTIL1" />
-            <Scheduling_only v="no" />
-            <Description_string v="FreeRTOS+Trace" />
-            <Description_max_length v="80" />
-            <group name="Events">
-              <group name="Kernel Service Calls">
-                <group name="Task">
-                  <vTaskDelay v="yes" />
-                  <vTaskDelayUntil v="yes" />
-                </group>
-              </group>
-            </group>
-            <Include_user_events v="yes" />
-            <Include_ISR_tracing v="yes" />
-            <Max_ISR_Nesting v="16" />
-            <Include_object_delete_events v="yes" />
-            <Include_new_time_events v="no" />
-            <Include_ready_events v="yes" />
-            <Include_memory_manager_events v="no" />
-            <Heap_Size_below_16M v="no" />
-            <Trace_Data_Allocation v="static" />
-            <Recorder_store_mode v="Ring Buffer" />
-            <Use_implicit_IFE_rules v="yes" />
-            <Use_16bit_Object_Handles v="no" />
-            <Include_event_stats v="no" />
-            <Event_Count_Size v="256" />
-            <Float_support v="no" />
-            <Event_buffer_size v="1200" />
-            <Symbol_table_size v="400" />
-            <Number_of_tasks v="10" />
-            <Number_of_ISR v="4" />
-            <Number_of_queue v="3" />
-            <Number_of_semaphore v="4" />
-            <Number_of_mutex v="4" />
-            <Number_of_Timer v="2" />
-            <Number_of_Event_Groups v="2" />
-            <Name_length_for_task v="configMAX_TASK_NAME_LEN" />
-            <Name_length_for_ISR v="10" />
-            <Name_length_for_queue v="15" />
-            <Name_length_for_semaphore v="15" />
-            <Name_length_for_mutex v="15" />
-            <Name_length_for_timer v="15" />
-            <Name_length_for_event_group v="15" />
-          </Properties>
-          <Methods>
-            <uiTraceStart v="generate code" />
-            <vTraceStop v="generate code" />
-            <vTraceClear v="generate code" />
-            <uiTraceGetTraceBufferSize v="generate code" />
-            <vTraceGetTraceBuffer v="generate code" />
-            <vTraceSetTimerFrequency v="generate code" />
-            <xTraceOpenLabel v="generate code" />
-            <vTraceUserEvent v="generate code" />
-            <vTracePrintF v="generate code" />
-            <vTraceSetQueueName v="generate code" />
-            <vTraceSetISRProperties v="generate code" />
-            <vTraceStoreISRBegin v="generate code" />
-            <vTraceStoreISREnd v="generate code" />
-            <vTraceTaskSkipDefaultInstanceFinishedEvents v="generate code" />
-            <vTraceTaskInstanceIsFinished v="generate code" />
-            <vTraceExcludeTaskFromSchedulingTrace v="generate code" />
-            <vTraceInitTraceData v="generate code" />
-            <vGetGDBDumpCommand v="generate code" />
-            <vTraceSetStopHook v="generate code" />
-            <xTraceGetLastError v="generate code" />
-            <vTraceClearError v="generate code" />
-            <vTraceTaskInstanceFinish v="generate code" />
-            <vTraceTaskInstanceFinishDirect v="generate code" />
-          </Methods>
-          <Events>
-            <Event_module_name v="Events" />
-            <event name="OnTraceStop" v="don&amp;apos;t generate code" />
-            <event name="OnTraceStart" v="don&amp;apos;t generate code" />
-            <event name="OnTraceWrap" v="generate code">
-              <Event_procedure_name v="RTOSTRC1_OnTraceWrap" />
-            </event>
-          </Events>
-        </inhrbean>
-      </boolgroup>
-      <boolgroup name="Collect Runtime Statistics" v="Enabled">
-        <Use_Tick_Counter v="yes" />
-        <boolgroup name="LDD" v="Disabled" />
-        <boolgroup name="non-LDD" v="Disabled" />
-      </boolgroup>
-      <group name="Scheduler">
-        <boolgroup name="ColdFire V1" v="Disabled" />
-        <boolgroup name="ColdFire V2" v="Disabled" />
-        <boolgroup name="Kinetis" v="Enabled">
-          <ARM_Family v="Cortex M0+" />
-          <Floating_Point_Support v="no" />
-          <Max_SysCall_Interrupt_Priority v="1" />
-          <RTOS_Interrupt_Priority v="3" />
-          <Lowest_Interrupt_Priority v="3" />
-          <Compiler_Optimization_Level v="0" />
-          <boolgroup name="SysTick" v="Enabled">
-            <Core_Clock v="yes" />
-          </boolgroup>
-          <boolgroup name="Low Power Timer" v="Disabled" />
-        </boolgroup>
-        <boolgroup name="non-LDD SWI" v="Disabled" />
-        <Preemptive v="yes" />
-        <Use_Co_Routines v="no" />
-        <Idle_should_yield v="yes" />
-        <Task_Name_Length v="12" />
-        <Minimal_Stack_Size v="200" />
-        <Maximum_Priorities v="6" />
-        <Maximum_Coroutine_Priorities v="2" />
-        <Stackoverflow_checking_method v="Method 1" />
-        <Cleanup_Resources v="yes" />
-        <TaskExitError_Handler v="no" />
-      </group>
-      <group name="Ticks">
-        <boolgroup name="Tickless Idle Mode" v="Disabled" />
-        <Tick_Rate__Hz_ v="100" />
-        <Use_16bit_ticks v="no" />
-        <boolgroup name="non-LDD Tick" v="Disabled" />
-        <boolgroup name="LDD Tick" v="Disabled" />
-      </group>
-      <group name="Queues">
-        <Queue_Registry_Size v="0" />
-        <Queue_Sets v="no" />
-      </group>
-      <group name="Semaphores and Mutexes">
-        <Use_Mutexes v="yes" />
-        <Use_Recursive_Mutexes v="yes" />
-      </group>
-      <boolgroup name="Timers" v="Disabled" />
-      <group name="Memory">
-        <Memory_Allocation_Scheme v="Scheme 2" />
-        <boolgroup name="User Heap Section" v="Disabled" />
-        <Total_Heap_Size v="10000" />
-      </group>
-      <boolgroup name="Shell" v="Enabled">
-        <Shell v="CLS1" />
-      </boolgroup>
-      <Utility v="UTIL1" />
-    </Properties>
-    <Methods>
-      <xTaskCreate v="generate code" />
-      <vTaskDelete v="generate code" />
-      <vTaskStartScheduler v="generate code" />
-      <vTaskEndScheduler v="generate code" />
-      <vTaskSuspend v="generate code" />
-      <vTaskSuspendAll v="generate code" />
-      <vTaskResume v="generate code" />
-      <xTaskResumeAll v="generate code" />
-      <xTaskResumeFromISR v="generate code" />
-      <vTaskStepTick v="don&amp;apos;t generate code" />
-      <taskYIELD v="generate code" />
-      <taskENTER_CRITICAL v="generate code" />
-      <taskEXIT_CRITICAL v="generate code" />
-      <taskDISABLE_INTERRUPTS v="generate code" />
-      <taskENABLE_INTERRUPTS v="generate code" />
-      <vTaskDelay v="generate code" />
-      <vTaskDelayUntil v="generate code" />
-      <uxTaskPriorityGet v="generate code" />
-      <vTaskPrioritySet v="generate code" />
-      <xTaskGetTickCount v="generate code" />
-      <xTaskGetTickCountFromISR v="generate code" />
-      <xSemaphoreCreateRecursiveMutex v="generate code" />
-      <xSemaphoreTakeRecursive v="generate code" />
-      <xSemaphoreGiveRecursive v="generate code" />
-      <xSemaphoreCreateMutex v="generate code" />
-      <xSemaphoreTake v="generate code" />
-      <xSemaphoreGive v="generate code" />
-      <vSemaphoreCreateBinary v="generate code" />
-      <xSemaphoreCreateCounting v="generate code" />
-      <xSemaphoreGiveFromISR v="generate code" />
-      <xSemaphoreTakeFromISR v="generate code" />
-      <vSemaphoreDelete v="generate code" />
-      <xSemaphoreGetMutexHolder v="generate code" />
-      <pvPortMalloc v="generate code" />
-      <vPortFree v="generate code" />
-      <xPortGetFreeHeapSize v="generate code" />
-      <vTaskSetApplicationTaskTag v="don&amp;apos;t generate code" />
-      <xTaskGetApplicationTaskTag v="don&amp;apos;t generate code" />
-      <xTaskCallApplicationTaskHook v="don&amp;apos;t generate code" />
-      <xTaskGetCurrentTaskHandle v="don&amp;apos;t generate code" />
-      <xTaskGetIdleTaskHandle v="don&amp;apos;t generate code" />
-      <pcTaskGetTaskName v="don&amp;apos;t generate code" />
-      <eTaskGetState v="don&amp;apos;t generate code" />
-      <xTaskGetSchedulerState v="generate code" />
-      <vTaskList v="generate code" />
-      <uxTaskGetStackHighWaterMark v="generate code" />
-      <uxTaskGetNumberOfTasks v="generate code" />
-      <vTaskGetRunTimeStats v="generate code" />
-      <uxQueueMessagesWaiting v="generate code" />
-      <uxQueueMessagesWaitingfromISR v="generate code" />
-      <xQueueCreate v="generate code" />
-      <vQueueDelete v="generate code" />
-      <xQueueReset v="generate code" />
-      <xQueueSendToBack v="generate code" />
-      <xQueueSendToFront v="generate code" />
-      <xQueueReceive v="generate code" />
-      <xQueueOverwrite v="generate code" />
-      <xQueueOverwriteFromISR v="generate code" />
-      <xQueuePeek v="generate code" />
-      <xQueuePeekFromISR v="generate code" />
-      <xQueueSendToBackFromISR v="generate code" />
-      <xQueueSendToFrontFromISR v="generate code" />
-      <xQueueReceiveFromISR v="generate code" />
-      <vQueueAddToRegistry v="generate code" />
-      <vQueueUnregisterQueue v="generate code" />
-      <xQueueIsQueueFullFromISR v="generate code" />
-      <xQueueIsQueueEmptyFromISR v="generate code" />
-      <xQueueCreateSet v="don&amp;apos;t generate code" />
-      <xQueueAddToSet v="don&amp;apos;t generate code" />
-      <xQueueRemoveFromSet v="don&amp;apos;t generate code" />
-      <xQueueSelectFromSet v="don&amp;apos;t generate code" />
-      <xQueueSelectFromSetFromISR v="don&amp;apos;t generate code" />
-      <xEventGroupCreate v="generate code" />
-      <xEventGroupWaitBits v="generate code" />
-      <xEventGroupSetBits v="generate code" />
-      <xEventGroupSetBitsFromISR v="generate code" />
-      <xEventGroupClearBits v="generate code" />
-      <xEventGroupClearBitsFromISR v="generate code" />
-      <xEventGroupGetBits v="generate code" />
-      <xEventGroupGetBitsFromISR v="generate code" />
-      <xEventGroupSync v="generate code" />
-      <xTimerCreate v="generate code" />
-      <xTimerIsTimerActive v="generate code" />
-      <xTimerStart v="generate code" />
-      <xTimerStop v="generate code" />
-      <xTimerChangePeriod v="generate code" />
-      <xTimerDelete v="generate code" />
-      <xTimerReset v="generate code" />
-      <xTimerStartFromISR v="generate code" />
-      <xTimerStopFromISR v="generate code" />
-      <xTimerChangePeriodFromISR v="generate code" />
-      <xTimerResetFromISR v="generate code" />
-      <pvTimerGetTimerID v="generate code" />
-      <xTimerGetTimerDaemonTaskHandle v="generate code" />
-      <pcTimerGetTimerName v="generate code" />
-      <xTimerPendFunctionCall v="generate code" />
-      <xTimerPendFunctionCallFromISR v="generate code" />
-      <xTaskNotifyGive v="generate code" />
-      <vTaskNotifyGiveFromISR v="generate code" />
-      <ulTaskNotifyTake v="generate code" />
-      <xTaskNotify v="generate code" />
-      <xTaskNotifyFromISR v="generate code" />
-      <xTaskNotifyWait v="generate code" />
-      <ParseCommand v="generate code" />
-      <Init v="generate code" />
-    </Methods>
-    <Events>
-      <Event_module_name v="Events" />
-      <event name="vApplicationStackOverflowHook" v="generate code">
-        <Event_procedure_name v="FRTOS1_vApplicationStackOverflowHook" />
-      </event>
-      <event name="vApplicationTickHook" v="generate code">
-        <Event_procedure_name v="FRTOS1_vApplicationTickHook" />
-      </event>
-      <event name="vApplicationIdleHook" v="generate code">
-        <Event_procedure_name v="FRTOS1_vApplicationIdleHook" />
-      </event>
-      <event name="vApplicationMallocFailedHook" v="generate code">
-        <Event_procedure_name v="FRTOS1_vApplicationMallocFailedHook" />
-      </event>
-      <event name="vOnPreSleepProcessing" v="don&amp;apos;t generate code" />
-      <event name="vOnPostSleepProcessing" v="don&amp;apos;t generate code" />
-    </Events>
-  </Bean>
   <Bean name="BUZ1" type="BitIO">
     <Enabled v="Y" />
     <Properties>
@@ -2688,6 +2404,206 @@ rising or falling edge
     <Events>
       <Event_module_name v="Events" />
       <event name="OnError" v="don&amp;apos;t generate code" />
+    </Events>
+  </Bean>
+  <Bean name="FRTOS1" type="FreeRTOS">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="FRTOS1" />
+      <RTOS_Version v="V8.2.0" />
+      <group name="Custom Port">
+        <Compiler v="automatic" />
+        <boolgroup name="Static Sources" v="Disabled" />
+        <boolgroup name="Custom portBASE_TYPE" v="Disabled" />
+      </group>
+      <boolgroup name="Kinetis SDK" v="Disabled" />
+      <Classic_CodeWarrior v="no" />
+      <Disabled_Interrupts_in_Startup v="yes" />
+      <configASSERT_defined v="yes" />
+      <Application_Task_Tags v="no" />
+      <Use_Trace_Facility v="yes" />
+      <boolgroup name="Trace Hooks" v="Disabled" />
+      <boolgroup name="Collect Runtime Statistics" v="Enabled">
+        <Use_Tick_Counter v="yes" />
+        <boolgroup name="LDD" v="Disabled" />
+        <boolgroup name="non-LDD" v="Disabled" />
+      </boolgroup>
+      <group name="Scheduler">
+        <boolgroup name="ColdFire V1" v="Disabled" />
+        <boolgroup name="ColdFire V2" v="Disabled" />
+        <boolgroup name="Kinetis" v="Enabled">
+          <ARM_Family v="Cortex M4F" />
+          <Floating_Point_Support v="yes" />
+          <Max_SysCall_Interrupt_Priority v="1" />
+          <RTOS_Interrupt_Priority v="15" />
+          <Lowest_Interrupt_Priority v="15" />
+          <Compiler_Optimization_Level v="0" />
+          <boolgroup name="SysTick" v="Enabled">
+            <Core_Clock v="yes" />
+          </boolgroup>
+          <boolgroup name="Low Power Timer" v="Disabled" />
+        </boolgroup>
+        <boolgroup name="non-LDD SWI" v="Disabled" />
+        <Preemptive v="yes" />
+        <Use_Co_Routines v="no" />
+        <Idle_should_yield v="no" />
+        <Task_Name_Length v="12" />
+        <Minimal_Stack_Size v="200" />
+        <Maximum_Priorities v="6" />
+        <Maximum_Coroutine_Priorities v="2" />
+        <Stackoverflow_checking_method v="Method 1" />
+        <Cleanup_Resources v="no" />
+        <TaskExitError_Handler v="no" />
+      </group>
+      <group name="Ticks">
+        <boolgroup name="Tickless Idle Mode" v="Disabled" />
+        <Tick_Rate__Hz_ v="100" />
+        <Use_16bit_ticks v="no" />
+        <boolgroup name="non-LDD Tick" v="Disabled" />
+        <boolgroup name="LDD Tick" v="Disabled" />
+      </group>
+      <group name="Queues">
+        <Queue_Registry_Size v="0" />
+        <Queue_Sets v="no" />
+      </group>
+      <group name="Semaphores and Mutexes">
+        <Use_Mutexes v="yes" />
+        <Use_Recursive_Mutexes v="yes" />
+      </group>
+      <boolgroup name="Timers" v="Disabled" />
+      <group name="Memory">
+        <Memory_Allocation_Scheme v="Scheme 4" />
+        <boolgroup name="User Heap Section" v="Disabled" />
+        <Total_Heap_Size v="16000" />
+      </group>
+      <boolgroup name="Shell" v="Enabled">
+        <Shell v="CLS1" />
+      </boolgroup>
+      <Utility v="UTIL1" />
+    </Properties>
+    <Methods>
+      <xTaskCreate v="generate code" />
+      <vTaskDelete v="generate code" />
+      <vTaskStartScheduler v="generate code" />
+      <vTaskEndScheduler v="generate code" />
+      <vTaskSuspend v="generate code" />
+      <vTaskSuspendAll v="generate code" />
+      <vTaskResume v="generate code" />
+      <xTaskResumeAll v="generate code" />
+      <xTaskResumeFromISR v="generate code" />
+      <vTaskStepTick v="don&amp;apos;t generate code" />
+      <taskYIELD v="generate code" />
+      <taskENTER_CRITICAL v="generate code" />
+      <taskEXIT_CRITICAL v="generate code" />
+      <taskDISABLE_INTERRUPTS v="generate code" />
+      <taskENABLE_INTERRUPTS v="generate code" />
+      <vTaskDelay v="generate code" />
+      <vTaskDelayUntil v="generate code" />
+      <uxTaskPriorityGet v="generate code" />
+      <vTaskPrioritySet v="generate code" />
+      <xTaskGetTickCount v="generate code" />
+      <xTaskGetTickCountFromISR v="generate code" />
+      <xSemaphoreCreateRecursiveMutex v="generate code" />
+      <xSemaphoreTakeRecursive v="generate code" />
+      <xSemaphoreGiveRecursive v="generate code" />
+      <xSemaphoreCreateMutex v="generate code" />
+      <xSemaphoreTake v="generate code" />
+      <xSemaphoreGive v="generate code" />
+      <vSemaphoreCreateBinary v="generate code" />
+      <xSemaphoreCreateCounting v="generate code" />
+      <xSemaphoreGiveFromISR v="generate code" />
+      <xSemaphoreTakeFromISR v="generate code" />
+      <vSemaphoreDelete v="generate code" />
+      <xSemaphoreGetMutexHolder v="generate code" />
+      <pvPortMalloc v="generate code" />
+      <vPortFree v="generate code" />
+      <xPortGetFreeHeapSize v="generate code" />
+      <vTaskSetApplicationTaskTag v="don&amp;apos;t generate code" />
+      <xTaskGetApplicationTaskTag v="don&amp;apos;t generate code" />
+      <xTaskCallApplicationTaskHook v="don&amp;apos;t generate code" />
+      <xTaskGetCurrentTaskHandle v="don&amp;apos;t generate code" />
+      <xTaskGetIdleTaskHandle v="don&amp;apos;t generate code" />
+      <pcTaskGetTaskName v="don&amp;apos;t generate code" />
+      <eTaskGetState v="don&amp;apos;t generate code" />
+      <xTaskGetSchedulerState v="generate code" />
+      <vTaskList v="generate code" />
+      <uxTaskGetStackHighWaterMark v="generate code" />
+      <uxTaskGetNumberOfTasks v="generate code" />
+      <vTaskGetRunTimeStats v="generate code" />
+      <uxQueueMessagesWaiting v="generate code" />
+      <uxQueueMessagesWaitingfromISR v="generate code" />
+      <xQueueCreate v="generate code" />
+      <vQueueDelete v="generate code" />
+      <xQueueReset v="generate code" />
+      <xQueueSendToBack v="generate code" />
+      <xQueueSendToFront v="generate code" />
+      <xQueueReceive v="generate code" />
+      <xQueueOverwrite v="generate code" />
+      <xQueueOverwriteFromISR v="generate code" />
+      <xQueuePeek v="generate code" />
+      <xQueuePeekFromISR v="generate code" />
+      <xQueueSendToBackFromISR v="generate code" />
+      <xQueueSendToFrontFromISR v="generate code" />
+      <xQueueReceiveFromISR v="generate code" />
+      <vQueueAddToRegistry v="generate code" />
+      <vQueueUnregisterQueue v="generate code" />
+      <xQueueIsQueueFullFromISR v="generate code" />
+      <xQueueIsQueueEmptyFromISR v="generate code" />
+      <xQueueCreateSet v="don&amp;apos;t generate code" />
+      <xQueueAddToSet v="don&amp;apos;t generate code" />
+      <xQueueRemoveFromSet v="don&amp;apos;t generate code" />
+      <xQueueSelectFromSet v="don&amp;apos;t generate code" />
+      <xQueueSelectFromSetFromISR v="don&amp;apos;t generate code" />
+      <xEventGroupCreate v="generate code" />
+      <xEventGroupWaitBits v="generate code" />
+      <xEventGroupSetBits v="generate code" />
+      <xEventGroupSetBitsFromISR v="generate code" />
+      <xEventGroupClearBits v="generate code" />
+      <xEventGroupClearBitsFromISR v="generate code" />
+      <xEventGroupGetBits v="generate code" />
+      <xEventGroupGetBitsFromISR v="generate code" />
+      <xEventGroupSync v="generate code" />
+      <xTimerCreate v="generate code" />
+      <xTimerIsTimerActive v="generate code" />
+      <xTimerStart v="generate code" />
+      <xTimerStop v="generate code" />
+      <xTimerChangePeriod v="generate code" />
+      <xTimerDelete v="generate code" />
+      <xTimerReset v="generate code" />
+      <xTimerStartFromISR v="generate code" />
+      <xTimerStopFromISR v="generate code" />
+      <xTimerChangePeriodFromISR v="generate code" />
+      <xTimerResetFromISR v="generate code" />
+      <pvTimerGetTimerID v="generate code" />
+      <xTimerGetTimerDaemonTaskHandle v="generate code" />
+      <pcTimerGetTimerName v="generate code" />
+      <xTimerPendFunctionCall v="generate code" />
+      <xTimerPendFunctionCallFromISR v="generate code" />
+      <xTaskNotifyGive v="generate code" />
+      <vTaskNotifyGiveFromISR v="generate code" />
+      <ulTaskNotifyTake v="generate code" />
+      <xTaskNotify v="generate code" />
+      <xTaskNotifyFromISR v="generate code" />
+      <xTaskNotifyWait v="generate code" />
+      <ParseCommand v="generate code" />
+      <Init v="generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="vApplicationStackOverflowHook" v="generate code">
+        <Event_procedure_name v="FRTOS1_vApplicationStackOverflowHook" />
+      </event>
+      <event name="vApplicationTickHook" v="generate code">
+        <Event_procedure_name v="FRTOS1_vApplicationTickHook" />
+      </event>
+      <event name="vApplicationIdleHook" v="generate code">
+        <Event_procedure_name v="FRTOS1_vApplicationIdleHook" />
+      </event>
+      <event name="vApplicationMallocFailedHook" v="generate code">
+        <Event_procedure_name v="FRTOS1_vApplicationMallocFailedHook" />
+      </event>
+      <event name="vOnPreSleepProcessing" v="don&amp;apos;t generate code" />
+      <event name="vOnPostSleepProcessing" v="don&amp;apos;t generate code" />
     </Events>
   </Bean>
 </PE_PROJECT_SETTINGS_DOCUMENTATION>

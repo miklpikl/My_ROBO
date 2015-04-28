@@ -72,7 +72,6 @@
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\LEDpin2.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\PE_LDD.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\PTA.c</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\RTOSTRC1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\Rx1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\Serial1.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\TI1.c</PathName>
@@ -96,11 +95,6 @@
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\queue.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\tasks.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\timers.c</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcBase.c</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcHardwarePort.c</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcKernel.c</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcKernelPort.c</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcUser.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\usb_cdc.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\usb_cdc_pstn.c</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\usb_class.c</PathName>
@@ -157,7 +151,6 @@
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\PE_LDD.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\PE_Types.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\PTA.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\RTOSTRC1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\Rx1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\Serial1.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\StackMacros.h</PathName>
@@ -185,14 +178,6 @@
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\semphr.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\task.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\timers.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcBase.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcConfig.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcHardwarePort.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcKernel.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcKernelHooks.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcKernelPort.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcTypes.h</PathName>
-      <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\trcUser.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\types.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\usb_bdt_kinetis.h</PathName>
       <PathName>C:\Users\MiklPikl\Desktop\School\6th Semester- Luzern\1 - Infotronics\My_ROBO\ROBO\Generated_Code\usb_cdc.h</PathName>
